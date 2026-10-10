@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" id="meta-desc" content="متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.">
+    <meta property="og:title" id="og-title" content="الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd">
+    <meta property="og:description" id="og-desc" content="متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0d1b2a',
+                            900: '#0b1320',
+                            950: '#050911',
+                        },
+                        gold: {
+                            400: '#f3c669',
+                            500: '#d4af37',
+                            600: '#aa820a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" />
+    <!-- Google Tajawal Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 relative antialiased pb-16 md:pb-0">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201050003380" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر الواتساب" class="hidden md:flex fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 items-center justify-center transition-all duration-300 transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl" aria-hidden="true"></i>
+    </a>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-navy-950 border-t border-gold-500/30 py-2 px-4 z-50 flex justify-around items-center md:hidden shadow-2xl">
+        <a href="https://wa.me/201050003380" target="_blank" class="flex flex-col items-center text-green-400 text-xs font-bold gap-1">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>واتساب</span>
+        </a>
+        <a href="tel:+818047528080" class="flex flex-col items-center text-gold-400 text-xs font-bold gap-1">
+            <i class="fa-solid fa-phone text-lg"></i>
+            <span>اليابان</span>
+        </a>
+        <a href="#contact" class="flex flex-col items-center text-slate-200 text-xs font-bold gap-1">
+            <i class="fa-solid fa-file-pen text-lg"></i>
+            <span>طلب تسعيرة</span>
+        </a>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-navy-900 text-white sticky top-0 z-40 shadow-lg border-b border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/0b1320/f3c669?text=ALJAWHARA';" alt="ALJAWHARA Co., Ltd Logo" class="h-12 w-12 rounded-full border border-gold-500 object-cover" loading="eager">
+                <div>
+                    <span class="text-lg md:text-xl font-bold tracking-wider block text-gold-400" dir="ltr">ALJAWHARA Co., Ltd</span>
+                    <span id="nav-subname" class="text-xs text-slate-300 block">الجوهرة للاستيراد والتصدير</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="flex items-center bg-navy-800 border border-gold-500/40 rounded-lg p-1 text-xs font-bold gap-1" role="group" aria-label="Language Switcher">
+                    <button id="btn-ar" onclick="changeLanguage('ar')" aria-pressed="true" class="px-2 py-1 rounded bg-gold-500 text-navy-950 font-bold transition">عربي</button>
+                    <button id="btn-en" onclick="changeLanguage('en')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">EN</button>
+                    <button id="btn-ja" onclick="changeLanguage('ja')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">日本語</button>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a id="nav-services" href="#services" class="hover:text-gold-400 transition">الخدمات</a>
+                    <a id="nav-gallery" href="#gallery" class="hover:text-gold-400 transition">معرض الأعمال</a>
+                    <a id="nav-about" href="#about" class="hover:text-gold-400 transition">عن الشركة</a>
+                    <a id="nav-inquiry" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 px-5 py-2 rounded-md font-bold transition shadow-md">أطلب الآن</a>
+                </nav>
+
+                <button onclick="toggleMobileMenu()" aria-label="فتح القائمة" class="md:hidden text-gold-400 text-2xl px-2 focus:outline-none">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-t border-gold-500/20 px-4 py-4 space-y-3 text-sm">
+            <a id="mob-nav-services" href="#services" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">الخدمات</a>
+            <a id="mob-nav-gallery" href="#gallery" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">معرض الأعمال</a>
+            <a id="mob-nav-about" href="#about" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">عن الشركة</a>
+            <a id="mob-nav-inquiry" href="#contact" onclick="toggleMobileMenu()" class="block bg-gold-500 text-navy-950 text-center py-2 rounded font-bold">أطلب الآن</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-navy-900 text-white py-20 px-4 text-center border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-navy-800 border border-gold-500/40 px-4 py-1.5 rounded-full text-gold-400 text-xs font-semibold mb-6">
+                <span>EGYPT 🇪🇬 ⇄ JAPAN 🇯🇵</span>
+                <span>•</span>
+                <span id="hero-badge-since">SINCE 2026</span>
+            </div>
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-extrabold mt-1 mb-6 leading-tight">
+                الجوهرة للاستيراد والتصدير <br>
+                <span class="text-gold-400 text-2xl md:text-4xl">تصدير السيارات، المحركات، قطع الغيار، والأنصاف المقطوعة من اليابان</span>
+            </h1>
+            <p id="hero-desc" class="text-slate-300 max-w-3xl mx-auto text-base md:text-lg mb-8 leading-relaxed">
+                متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة إلى مصر وكافة دول العالم.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a id="hero-btn-quote" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold py-3 px-8 rounded-lg shadow-lg transition">طلب تسعيرة قطعة / محرك</a>
+                <a id="hero-btn-about" href="#about" class="bg-navy-800 hover:bg-navy-800/80 text-gold-400 font-bold py-3 px-6 rounded-lg border border-gold-500/40 transition">بيانات الشركة الرسمية</a>
+            </div>
+
+            <!-- Trust Badges Bar -->
+            <div class="mt-12 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
+                <div class="flex flex-col items-center p-2">
+                    <i class="fa-solid fa-circle-check text-gold-400 text-2xl mb-2"></i>
+                    <span id="tb-1" class="text-xs text-slate-300 font-medium">محركات مفحوصة 100%</span>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <i class="fa-solid fa-ship text-gold-400 text-2xl mb-2"></i>
+                    <span id="tb-2" class="text-xs text-slate-300 font-medium">شحن آمن وتستيف احترافي</span>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <i class="fa-solid fa-award text-gold-400 text-2xl mb-2"></i>
+                    <span id="tb-3" class="text-xs text-slate-300 font-medium">خبرة من المزاد لساحتك مباشرة</span>
+                </div>
+                <div class="flex flex-col items-center p-2">
+                    <i class="fa-solid fa-headset text-gold-400 text-2xl mb-2"></i>
+                    <span id="tb-4" class="text-xs text-slate-300 font-medium">دعم وتواصل مباشر عبر الواتساب</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 id="services-title" class="text-3xl font-bold text-navy-900">خدماتنا الرئيسية</h2>
+            <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
+            <p id="services-subtitle" class="text-slate-600">حلول متكاملة لاستيراد وتصدير قطع السيارات من المزادات اليابانية مباشرة.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold-500 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                </div>
+                <h3 id="s1-title" class="text-xl font-bold text-navy-900 mb-1">المحركات والقطع الميكانيكية</h3>
+                <p id="s1-tag" class="text-gold-600 text-xs font-semibold mb-3">JDM Tested Engines & Transmissions</p>
+                <p id="s1-desc" class="text-slate-600 text-sm leading-relaxed">توفير المحركات المفحوصة (Toyota, Mitsubishi, Nissan, Mazda) مع ناقل الحركة (الجيربوكس)، الضفيرة، والكمبيوتر جاهزة للتصدير.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold-500 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+                </div>
+                <h3 id="s2-title" class="text-xl font-bold text-navy-900 mb-1">قص الأنصاف والأوجه (Half Cuts)</h3>
+                <p id="s2-tag" class="text-gold-600 text-xs font-semibold mb-3">Custom Dismantling & Front Cuts</p>
+                <p id="s2-desc" class="text-slate-600 text-sm leading-relaxed">تفكيك وقص السيارات حسب الطلب (أنصاف أمامية Nose Cuts، أنصاف خلفية، أجزاء الصاج والهيكل) بأعلى معايير الدقة.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold-500 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-box-archive" aria-hidden="true"></i>
+                </div>
+                <h3 id="s3-title" class="text-xl font-bold text-navy-900 mb-1">تستيف وشحن الحاويات (Vanning)</h3>
+                <p id="s3-tag" class="text-gold-600 text-xs font-semibold mb-3">Container Loading 20ft / 40ft HQ</p>
+                <p id="s3-desc" class="text-slate-600 text-sm leading-relaxed">تجهيز وتحميل الحاويات وتستيف القطع باحترافية لتوفير المجمعات والمساحات وتقليل تكلفة الشحن للمستورد.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="bg-slate-200 py-16 border-t border-b border-slate-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="gallery-title" class="text-3xl font-bold text-navy-900">معرض الأعمال والساحة اليابانية</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
+                <p id="gallery-subtitle" class="text-slate-600">نماذج من شحناتنا، فحص المحركات، وتستيف الحاويات في موقع الشركة باليابان (اضغط على الصورة للتكبير)</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid"></div>
+        </div>
+    </section>
+
+    <!-- Company Profile & Locations -->
+    <section id="about" class="bg-white py-16 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 id="about-title" class="text-3xl font-bold text-navy-900">بيانات الشركة والمواقع الرسمية</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
+                <p id="about-subtitle" class="text-slate-600 text-sm">تفاصيل التسجيل الرسمي للشركة ومواقعنا عبر خرائط جوجل</p>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm">
+                <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                    <div class="border-b border-slate-200 pb-3 md:col-span-2">
+                        <dt id="lbl-cname" class="text-slate-500 font-semibold">اسم الشركة</dt>
+                        <dd class="text-navy-900 font-bold text-base mt-1">
+                            <span id="val-cname-text">شركة الجوهرة</span> | <span dir="ltr" class="inline-block">ALJAWHARA Co., Ltd</span>
+                        </dd>
+                    </div>
+                    <div class="border-b border-slate-200 pb-3">
+                        <dt id="lbl-jp-office" class="text-slate-500 font-semibold">المقر في اليابان (Location Japan)</dt>
+                        <dd class="text-navy-900 font-bold mt-1">
+                            <span id="val-jp-office-text" dir="ltr" class="inline-block">〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan</span>
+                        </dd>
+                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:+818047528080" class="hover:underline">+81 80-4752-8080</a></dd>
+                        <a href="https://maps.app.goo.gl/Gci6BKidrtYdGXbU6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-jp-link">عرض الموقع على خرائط جوجل</span>
+                        </a>
+                    </div>
+                    <div class="border-b border-slate-200 pb-3">
+                        <dt id="lbl-eg-office" class="text-slate-500 font-semibold">المقر في مصر (Location Egypt)</dt>
+                        <dd id="val-eg-office-text" class="text-navy-900 font-bold mt-1">شارع المستشارين - المنصورة - الدقهلية - مصر</dd>
+                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:+201050003380" class="hover:underline">+20 1050003380</a></dd>
+                        <a href="https://maps.app.goo.gl/Mkyidf1DiLdL6ngKA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-eg-link">عرض الموقع على خرائط جوجل</span>
+                        </a>
+                    </div>
+                    <div class="border-b border-slate-200 pb-3">
+                        <dt id="lbl-jp-since" class="text-slate-500 font-semibold">سنة التأسيس (اليابان)</dt>
+                        <dd id="val-jp-since" class="text-navy-900 font-bold text-base mt-1">SINCE 2026</dd>
+                    </div>
+                    <div class="border-b border-slate-200 pb-3">
+                        <dt id="lbl-eg-since" class="text-slate-500 font-semibold">سنة التأسيس (مصر)</dt>
+                        <dd id="val-eg-since" class="text-navy-900 font-bold text-base mt-1">SINCE 2020</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-slate-50 py-16 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="testi-title" class="text-3xl font-bold text-navy-900">آراء ثقة العملاء والمستوردين</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
+                <p id="testi-subtitle" class="text-slate-600">ما يقوله شركاؤنا ومستوردو قطع السيارات حول العالم</p>
+            </div>
+
+            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Contact & Direct Inquiry Form -->
+    <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
+        <div class="bg-navy-900 text-white rounded-2xl p-8 shadow-2xl border border-gold-500/30">
+            <h2 id="form-title" class="text-2xl font-bold text-center text-gold-400 mb-2">طلب تسعيرة واستفسار مباشر</h2>
+            <p id="form-subtitle" class="text-slate-300 text-center text-sm mb-6">أدخل كود المحرك، نوع السيارة، أو تفاصيل الحاوية المطلوبة</p>
+
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label id="lbl-name" for="clientName" class="block text-xs font-semibold uppercase mb-1 text-slate-300">الاسم / اسم الشركة</label>
+                        <input type="text" id="clientName" placeholder="مثال: شركة الجوهرة لقطع الغيار" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
+                    </div>
+                    <div>
+                        <label id="lbl-brand" for="carBrand" class="block text-xs font-semibold uppercase mb-1 text-slate-300">ماركة السيارة / المصنع</label>
+                        <select id="carBrand" aria-label="ماركة السيارة" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
+                            <option value="Toyota (تويوتا)">Toyota (تويوتا)</option>
+                            <option value="Mitsubishi (ميتسوبيشي)">Mitsubishi (ميتسوبيشي)</option>
+                            <option value="Nissan (نيسان)">Nissan (نيسان)</option>
+                            <option value="Mazda (مازدا)">Mazda (مازدا)</option>
+                            <option value="Honda (هوندا)">Honda (هوندا)</option>
+                            <option value="Subaru / أخرى">Subaru / أخرى</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label id="lbl-dest" for="destination" class="block text-xs font-semibold uppercase mb-1 text-slate-300">الميناء / وجهة الوصول</label>
+                        <input type="text" id="destination" placeholder="مثال: مصر - ميناء الإسكندرية" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
+                    </div>
+                    <div>
+                        <label id="lbl-type" for="orderType" class="block text-xs font-semibold uppercase mb-1 text-slate-300">تصنيف الطلب</label>
+                        <select id="orderType" aria-label="تصنيف الطلب" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
+                            <option value="محركات وقطع ميكانيكية (Engines)">محركات وقطع ميكانيكية (Tested Engines)</option>
+                            <option value="قص أنصاف وأوجه (Half Cuts)">قص أنصاف وأوجه (Half Cuts / Nose Cuts)</option>
+                            <option value="تستيف وشحن حاوية كاملة (Container Loading)">تستيف وشحن حاوية كاملة (Container Loading 20ft/40ft)</option>
+                            <option value="استفسار عام (General Inquiry)">استفسار عام (General Inquiry)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label id="lbl-details" for="orderDetails" class="block text-xs font-semibold uppercase mb-1 text-slate-300">تفاصيل الطلب (أكواد المحركات، أنصاف قطع، حاويات)</label>
+                    <textarea id="orderDetails" rows="4" placeholder="مثال: مطلوب محرك 2ZR-FXE مع الكيربكس، وطلب أسعار شحن حاوية 40 قدم." class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required></textarea>
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold py-3.5 rounded-lg transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+                        <span id="btn-submit">إرسال عبر الواتساب</span>
+                    </button>
+                </div>
+
+                <div id="formAlert" class="hidden bg-green-500/20 border border-green-500 text-green-300 p-3 rounded-lg text-xs text-center">
+                    <i class="fa-solid fa-circle-check ml-1"></i> <span id="alert-msg">جاري تحويلك إلى الواتساب لإتمام طلبك ومتابعة المبيعات...</span>
+                </div>
+
+                <p id="attach-notice" class="text-xs text-slate-400 mt-2 text-center">
+                    💡 يمكنك إرفاق صور القطع أو قوائم الأكواد مباشرة بعد الانتقال لربط الواتساب.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 text-center py-6 text-xs border-t border-slate-800">
+        <p id="footer-text">© 2026 الجوهرة للاستيراد والتصدير - ALJAWHARA Co., Ltd. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+
+    <!-- Script Block -->
+    <script>
+        let lightbox = null;
+
+        const galleryData = {
+            ar: [
+                { t: "فحص وااختبار المحركات", d: "اختبار الجودة والتأكد من كفاءة المحركات." },
+                { t: "قص وتجهيز الأنصاف", d: "تجهيز الأنصاف الأمامية والخلفية بحرفية." },
+                { t: "تستيف وتحميل الحاويات", d: "استغلال المساحات وتأمين الشحنة بالنقل البحري." },
+                { t: "شحنات وقطع غيار", d: "معاينة وتجهيز الطلبيات الخاصة بالعملاء." },
+                { t: "فحص وتجهيز المحركات", d: "تجهيز الجيربوكس والضفيرة والكمبيوتر." },
+                { t: "الساحة اليابانية", d: "من ساحات المزاد مباشرة في تشيبا - اليابان." },
+                { t: "تجهيز الصاج والهيكل", d: "تفكيك الأجزاء الخارجية حسب طلب العميل." },
+                { t: "تحميل الحاويات 40 قدم / 20 قدم", d: "عمليات الشحن البحري المنتظمة لمصر." },
+                { t: "معاينة قطع السيارات", d: "اختيار أفضل القطع الخالية من العيوب." },
+                { t: "أنصاف أمامية Nose Cuts", d: "قص الوجهيات وتثبيتها بأمان." },
+                { t: "قطع ميكانيكية وإكسسوارات", d: "توفير جميع احتياجات قطع الغيار اليابانية." },
+                { t: "تجهيز الشحنات للتصدير", d: "متابعة عملية الشحن والتغليف حتى الوصول." }
+            ],
+            en: [
+                { t: "Engine Testing & Inspection", d: "Ensuring quality and performance for all tested engines." },
+                { t: "Half Cut Preparation", d: "Precision front nose cuts and rear body dismantling." },
+                { t: "Container Vanning & Loading", d: "Optimizing space and securing cargo for ocean freight." },
+                { t: "Spare Parts Shipments", d: "Inspecting and preparing customized customer orders." },
+                { t: "Engine & Drivetrain Setup", d: "Complete setup including transmission, wiring & ECU." },
+                { t: "Japan Yard Operations", d: "Direct sourcing from Chiba auction yards, Japan." },
+                { t: "Body Parts & Sheet Metal", d: "Dismantling exterior panels per client request." },
+                { t: "20ft & 40ft HQ Containers", d: "Regular sea freight shipping schedules to Egypt." },
+                { t: "Auto Parts Quality Check", d: "Selecting fault-free premium JDM components." },
+                { t: "Front Nose Cuts", d: "Professional cutting and safe packing of front ends." },
+                { t: "Mechanical Parts & Accessories", d: "Full range of Japanese spare parts solutions." },
+                { t: "Export Cargo Preparation", d: "Comprehensive packaging and tracking till delivery." }
+            ],
+            ja: [
+                { t: "エンジン動作確認・テスト", d: "品質基準をクリアした高品質エンジンの厳選" },
+                { t: "ハーフカット・解体作業", d: "フロントノーズカットおよびリアボディの精密解体" },
+                { t: "コンテナバンニング・詰込", d: "空間最適化と海上輸送用の確実な固定作業" },
+                { t: "自動車部品・パーツ出荷", d: "個別オーダーに応じた部品の検品と出荷準備" },
+                { t: "駆動系・ECUセットアップ", d: "ミッション、ハーネス、コンピューター一式" },
+                { t: "千葉ヤード風景", d: "千葉県オークション会場からの direct 調達" },
+                { t: "外装・ボディパーツ解体", d: "お客様のリクエストに応じた外装部分の取り外し" },
+                { t: "20ft/40ft コンテナ積載", d: "エジプト向け regular 海上コンテナ便" },
+                { t: "パーツ品質検査", d: "状態の良い高品質な JDM パーツの選定" },
+                { t: "ノーズカット（フロント）", d: "フロント面の精密カットおよび安全梱包" },
+                { t: "メカニカル部品＆ accessories", d: "日本車パーツのあらゆるニーズに対応" },
+                { t: "輸出出荷・パッキング", d: "現地到着までの万全な packaging と管理" }
+            ]
+        };
+
+        const translations = {
+            ar: {
+                dir: "rtl",
+                align: "text-right",
+                title: "الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd",
+                metaDesc: "متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.",
+                navSubname: "الجوهرة للاستيراد والتصدير",
+                navServices: "الخدمات",
+                navGallery: "معرض الأعمال",
+                navAbout: "عن الشركة",
+                navInquiry: "أطلب الآن",
+                heroTitle: "الجوهرة للاستيراد والتصدير <br><span class='text-gold-400 text-2xl md:text-4xl'>تصدير السيارات، المحركات، قطع الغيار، والأنصاف المقطوعة من اليابان</span>",
+                heroDesc: "متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة إلى مصر وكافة دول العالم.",
+                heroBtnQuote: "طلب تسعيرة قطعة / محرك",
+                heroBtnAbout: "بيانات الشركة الرسمية",
+                tb1: "محركات مفحوصة 100%",
+                tb2: "شحن آمن وتستيف احترافي",
+                tb3: "خبرة من المزاد لساحتك مباشرة",
+                tb4: "دعم وتواصل مباشر عبر الواتساب",
+                servicesTitle: "خدماتنا الرئيسية",
+                servicesSubtitle: "حلول متكاملة لاستيراد وتصدير قطع السيارات من المزادات اليابانية مباشرة.",
+                s1Title: "المحركات والقطع الميكانيكية",
+                s1Tag: "JDM Tested Engines & Transmissions",
+                s1Desc: "توفير المحركات المفحوصة (Toyota, Mitsubishi, Nissan, Mazda) مع ناقل الحركة (الجيربوكس)، الضفيرة، والكمبيوتر جاهزة للتصدير.",
+                s2Title: "قص الأنصاف والأوجه (Half Cuts)",
+                s2Tag: "Custom Dismantling & Front Cuts",
+                s2Desc: "تفكيك وقص السيارات حسب الطلب (أنصاف أمامية Nose Cuts، أنصاف خلفية، أجزاء الصاج والهيكل) بأعلى معايير الدقة.",
+                s3Title: "تستيف وشحن الحاويات (Vanning)",
+                s3Tag: "Container Loading 20ft / 40ft HQ",
+                s3Desc: "تجهيز وتحميل الحاويات وتستيف القطع باحترافية لتوفير المجمعات والمساحات وتقليل تكلفة الشحن للمستورد.",
+                galleryTitle: "معرض الأعمال والساحة اليابانية",
+                gallerySubtitle: "نماذج من شحناتنا، فحص المحركات، وتستيف الحاويات في موقع الشركة باليابان (اضغط على الصورة للتكبير)",
+                aboutTitle: "بيانات الشركة والمواقع الرسمية",
+                aboutSubtitle: "تفاصيل التسجيل الرسمي للشركة ومواقعنا عبر خرائط جوجل",
+                lblCname: "اسم الشركة",
+                valCnameText: "شركة الجوهرة",
+                lblJpOffice: "المقر في اليابان (Location Japan)",
+                valJpOfficeText: "〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan",
+                mapJpLink: "عرض الموقع على خرائط جوجل",
+                lblEgOffice: "المقر في مصر (Location Egypt)",
+                valEgOfficeText: "شارع المستشارين - المنصورة - الدقهلية - مصر",
+                mapEgLink: "عرض الموقع على خرائط جوجل",
+                lblJpSince: "سنة التأسيس (اليابان)",
+                valJpSince: "SINCE 2026",
+                lblEgSince: "سنة التأسيس (مصر)",
+                valEgSince: "SINCE 2020",
+                testiTitle: "آراء ثقة العملاء والمستوردين",
+                testiSubtitle: "ما يقوله شركاؤنا ومستوردو قطع السيارات حول العالم",
+                testimonials: [
+                    {
+                        text: "تعامل راقي جداً وتستيف الحاوية 40 قدم كان استغلال ممتاز للمساحة والقطع جاءت مفحوصة وسليمة 100%.",
+                        author: "م/ أحمد زكي",
+                        role: "مستورد - القاهرة، مصر"
+                    },
+                    {
+                        text: "الأنصاف الأمامية (Nose Cuts) كانت مقصوصة بدقة وكافة الظفائر والكمبيوترات كانت كاملة وبحالة ممتازة.",
+                        author: "شركة السلام لقطع الغيار",
+                        role: "المنصورة، مصر"
+                    },
+                    {
+                        text: "سرعة في تجهيز المحركات المفحوصة والمتابعة خطوة بخطوة بالصور والفيديوهات أثناء التحميل باليابان.",
+                        author: "المركز الدولي للمحركات",
+                        role: "الإسكندرية، مصر"
+                    }
+                ],
+                formTitle: "طلب تسعيرة واستفسار مباشر",
+                formSubtitle: "أدخل كود المحرك، نوع السيارة، أو تفاصيل الحاوية المطلوبة",
+                lblName: "الاسم / اسم الشركة",
+                phName: "مثال: شركة الجوهرة لقطع الغيار",
+                lblBrand: "ماركة السيارة / المصنع",
+                brandOptions: [
+                    "Toyota (تويوتا)",
+                    "Mitsubishi (ميتسوبيشي)",
+                    "Nissan (نيسان)",
+                    "Mazda (مازدا)",
+                    "Honda (هوندا)",
+                    "Subaru / أخرى"
+                ],
+                lblDest: "الميناء / وجهة الوصول",
+                phDest: "مثال: مصر - ميناء الإسكندرية",
+                lblType: "تصنيف الطلب",
+                orderOptions: [
+                    "محركات وقطع ميكانيكية (Tested Engines)",
+                    "قص أنصاف وأوجه (Half Cuts / Nose Cuts)",
+                    "تستيف وشحن حاوية كاملة (Container Loading 20ft/40ft)",
+                    "استفسار عام (General Inquiry)"
+                ],
+                lblDetails: "تفاصيل الطلب (أكواد المحركات، أنصاف قطع، حاويات)",
+                phDetails: "مثال: مطلوب محرك 2ZR-FXE مع الكيربكس، وطلب أسعار شحن حاوية 40 قدم.",
+                btnSubmit: "إرسال عبر الواتساب",
+                alertMsg: "جاري تحويلك إلى الواتساب لإتمام طلبك ومتابعة المبيعات...",
+                attachNotice: "💡 يمكنك إرفاق صور القطع أو قوائم الأكواد مباشرة بعد الانتقال لربط الواتساب.",
+                footerText: "© 2026 الجوهرة للاستيراد والتصدير - ALJAWHARA Co., Ltd. جميع الحقوق محفوظة."
+            },
+            en: {
+                dir: "ltr",
+                align: "text-left",
+                title: "ALJAWHARA Co., Ltd | Exporting Japanese Auto Parts",
+                metaDesc: "Specialized in supplying JDM vehicles, tested engines, half cuts, container vanning, and logistics directly from Japan to Egypt and worldwide.",
+                navSubname: "ALJAWHARA Co., Ltd | Import & Export",
+                navServices: "Services",
+                navGallery: "Gallery",
+                navAbout: "About Us",
+                navInquiry: "Inquire Now",
+                heroTitle: "ALJAWHARA Import & Export <br><span class='text-gold-400 text-2xl md:text-4xl'>Exporting Japanese Cars, Engines & Spare Parts</span>",
+                heroDesc: "Specialized in supplying JDM vehicles, tested engines, half cuts, container vanning, and logistics directly from Japan to Egypt and worldwide.",
+                heroBtnQuote: "Get Parts / Engine Quote",
+                heroBtnAbout: "Company Registration",
+                tb1: "100% Tested Engines",
+                tb2: "Safe & Professional Vanning",
+                tb3: "Direct Yard & Auction Sourcing",
+                tb4: "Direct WhatsApp Support",
+                servicesTitle: "Our Core Services",
+                servicesSubtitle: "Complete solutions for exporting Japanese auto parts directly from auction yards.",
+                s1Title: "Tested Engines & Drivetrain",
+                s1Tag: "JDM Tested Engines & Transmissions",
+                s1Desc: "Supply of quality-tested engines (Toyota, Mitsubishi, Nissan, Mazda) with transmissions, wiring harnesses, and ECUs ready for shipment.",
+                s2Title: "Dismantling & Half Cuts",
+                s2Tag: "Custom Dismantling & Front Cuts",
+                s2Desc: "Custom dismantling, front nose cuts, rear cuts, and body parts executed to exact specifications with high precision.",
+                s3Title: "Container Vanning & Loading",
+                s3Tag: "Container Loading 20ft / 40ft HQ",
+                s3Desc: "Professional container vanning and space optimization to minimize freight costs and ensure safe transit.",
+                galleryTitle: "Work Gallery & Yard Operations",
+                gallerySubtitle: "Photos of engine testing, custom dismantling, and container loading at our Japan yard (Click image to enlarge).",
+                aboutTitle: "Official Company Profile & Locations",
+                aboutSubtitle: "Official registration details and Google Maps locations",
+                lblCname: "Company Name",
+                valCnameText: "ALJAWHARA Co., Ltd",
+                lblJpOffice: "Japan Head Office",
+                valJpOfficeText: "〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan",
+                mapJpLink: "View on Google Maps",
+                lblEgOffice: "Egypt Office",
+                valEgOfficeText: "Al-Moustashareen St., Mansoura, Dakahlia, Egypt",
+                mapEgLink: "View on Google Maps",
+                lblJpSince: "Established Year (Japan)",
+                valJpSince: "SINCE 2026",
+                lblEgSince: "Established Year (Egypt)",
+                valEgSince: "SINCE 2020",
+                testiTitle: "Importers & Client Feedback",
+                testiSubtitle: "What our global auto parts partners say about us",
+                testimonials: [
+                    {
+                        text: "Very professional service. Loading the 40ft HQ container was perfectly optimized, and all engines arrived 100% tested and intact.",
+                        author: "Eng. Ahmed Zaki",
+                        role: "Importer - Cairo, Egypt"
+                    },
+                    {
+                        text: "The front nose cuts were precisely dismantled. Wiring harnesses and ECUs were completely undamaged and in excellent condition.",
+                        author: "Al-Salam Auto Parts Co.",
+                        role: "Mansoura, Egypt"
+                    },
+                    {
+                        text: "Fast processing for tested engines with step-by-step updates, photos, and video confirmation during container vanning in Japan.",
+                        author: "International Engine Center",
+                        role: "Alexandria, Egypt"
+                    }
+                ],
+                formTitle: "Direct Price Inquiry",
+                formSubtitle: "Enter engine codes, car models, or container inquiries below",
+                lblName: "Your Name / Company Name",
+                phName: "e.g., AlJawhara Auto Spare Parts Co.",
+                lblBrand: "Car Brand / Maker",
+                brandOptions: [
+                    "Toyota",
+                    "Mitsubishi",
+                    "Nissan",
+                    "Mazda",
+                    "Honda",
+                    "Subaru / Other"
+                ],
+                lblDest: "Destination Port / Country",
+                phDest: "e.g., Alexandria Port, Egypt",
+                lblType: "Order Type",
+                orderOptions: [
+                    "Tested Engines & Mechanical Parts",
+                    "Half Cuts & Front Cuts",
+                    "Container Vanning & Loading (20ft/40ft)",
+                    "General Inquiry"
+                ],
+                lblDetails: "Order Details (Engine codes, half cuts, container load)",
+                phDetails: "e.g., Requesting quote for 2ZR-FXE engine assembly & 40ft HQ container loading rates.",
+                btnSubmit: "Send via WhatsApp",
+                alertMsg: "Redirecting to WhatsApp to complete your inquiry...",
+                attachNotice: "💡 You can attach photos or parts list directly after connecting to WhatsApp.",
+                footerText: "© 2026 ALJAWHARA Co., Ltd. All rights reserved."
+            },
+            ja: {
+                dir: "ltr",
+                align: "text-left",
+                title: "アルジャワハラ株式会社 | 中古車・自動車部品輸出",
+                metaDesc: "日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込作業を直輸出いたします。",
+                navSubname: "アルジャワハラ株式会社 | 中古車・自動車部品輸出",
+                navServices: "事業内容",
+                navGallery: "ギャラリー",
+                navAbout: "会社概要",
+                navInquiry: "お問い合わせ",
+                heroTitle: "アルジャワハラ株式会社 <br><span class='text-gold-400 text-2xl md:text-4xl'>中古車、エンジン、自動車部品の輸出専門</span>",
+                heroDesc: "日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込（バンニング）作業をエジプトおよび世界各国へ直輸出いたします。",
+                heroBtnQuote: "見積もり・パーツ問い合わせ",
+                heroBtnAbout: "公式会社概要を見る",
+                tb1: "100%動作確認済みエンジン",
+                tb2: "安全・確実なバンニング技術",
+                tb3: "オークション直接調達の実績",
+                tb4: "WhatsAppによる迅速サポート",
+                servicesTitle: "主な事業内容",
+                servicesSubtitle: "日本のオークション会場から直接パーツ調達・輸出までのワンストップソリューション",
+                s1Title: "エンジン・駆動系パーツ",
+                s1Tag: "JDM Tested Engines & Transmissions",
+                s1Desc: "動作確認済みエンジン（トヨタ、三菱、日産、マツダ）をミッション、ハーネス、ECU一式付きで輸出手配いたします。",
+                s2Title: "ハーフカット・ボディ解体作業",
+                s2Tag: "Custom Dismantling & Front Cuts",
+                s2Desc: "お客様のご要望に応じたフロントカット（ノーズカット）、リアカット、外装・ボディパーツの精密解体作業。",
+                s3Title: "コンテナバンニング（詰込作業）",
+                s3Tag: "Container Loading 20ft / 40ft HQ",
+                s3Desc: "20ft/40ftハイキューブコンテナへの効率的な積載・バンニング作業により、海上運賃コストを最適化します。",
+                galleryTitle: "作業ギャラリー・ヤード風景",
+                gallerySubtitle: "日本ヤードでのエンジンテスト、ハーフカット解体、コンテナ積載作業の様子（クリックで拡大）",
+                aboutTitle: "公式会社概要・所在地",
+                aboutSubtitle: "アルジャワハラ 株式会社 コーポレート情報およびアクセスマップ",
+                lblCname: "会社名",
+                valCnameText: "アルジャワハラ 株式会社",
+                lblJpOffice: "日本本社",
+                valJpOfficeText: "〒284-0001 千葉県四街道市大日 427-1",
+                mapJpLink: "Google Mapで見る",
+                lblEgOffice: "エジプト支社",
+                valEgOfficeText: "エジプト・ダカハリーヤ県マンスーラ",
+                mapEgLink: "Google Mapで見る",
+                lblJpSince: "設立年（日本）",
+                valJpSince: "SINCE 2026",
+                lblEgSince: "設立年（エジプト）",
+                valEgSince: "SINCE 2020",
+                testiTitle: "バイヤー・輸入業者様のお声",
+                testiSubtitle: "世界各国の取引先様からいただいた評価",
+                testimonials: [
+                    {
+                        text: "非常に丁寧で迅速な対応でした。40ftコンテナのバンニング効率も素晴らしく、届いたエンジンもすべて完璧に動作確認済みでした。",
+                        author: "アーメド・ザキ 技師",
+                        role: "バイヤー - カイロ、エジプト"
+                    },
+                    {
+                        text: "ノーズカット（フロントハーフカット）のカット精度が高く、ハーネスやコンピューター類も欠品なく綺麗な状態で届きました。",
+                        author: "アル・サラム オートパーツ社",
+                        role: "マンスーラ、エジプト"
+                    },
+                    {
+                        text: "動作確認済みエンジンの手配が早く、日本ヤードでの積み込み作業時も写真や動画でステップバイステップで共有してもらえて安心でした。",
+                        author: "国際エンジンセンター",
+                        role: "アレクサンドリア、エジプト"
+                    }
+                ],
+                formTitle: "直接お問い合わせ・お見積りフォーム",
+                formSubtitle: "エンジン型式、車種、またはコンテナ案件の詳細をご入力ください",
+                lblName: "お名前 / 貴社名",
+                phName: "例：ALJAWHARA Auto Parts Co.",
+                lblBrand: "自動車メーカー",
+                brandOptions: [
+                    "トヨタ (Toyota)",
+                    "三菱 (Mitsubishi)",
+                    "日産 (Nissan)",
+                    "マツダ (Mazda)",
+                    "ホンダ (Honda)",
+                    "スバル / その他 (Subaru / Other)"
+                ],
+                lblDest: "仕向地 / 陸揚港",
+                phDest: "例：エジプト アレクサンドリア港",
+                lblType: "お問い合わせ区分",
+                orderOptions: [
+                    "動作確認済みエンジン・駆動系部品",
+                    "ハーフカット・ノーズカット解体",
+                    "コンテナバンニング（20ft/40ft）",
+                    "その他・一般お問い合わせ"
+                ],
+                lblDetails: "お問い合わせ内容 (エンジン型式、パーツ、コンテナ)",
+                phDetails: "例: 2ZR-FXE エンジンの見積もり、および40ftコンテナバンニング費用について。",
+                btnSubmit: "WhatsAppで送信",
+                alertMsg: "WhatsAppへ転送中...",
+                attachNotice: "💡 WhatsAppに移動後、パーツの写真やファイルを追加で送信できます。",
+                footerText: "© 2026 アルジョウハラ株式会社 All rights reserved."
+            }
+        };
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        function renderGallery(lang) {
+            const container = document.getElementById('gallery-grid');
+            if(!container) return;
+            
+            const items = galleryData[lang] || galleryData['ar'];
+            container.innerHTML = items.map((item, index) => {
+                const imgNum = index + 1;
+                const imgSrc = `yard${imgNum}.jpg`;
+                const placeholderImg = `https://via.placeholder.com/600x400/0b1320/f3c669?text=Yard+Image+${imgNum}`;
+
+                return `
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group border border-slate-300">
+                    <a href="${imgSrc}" class="glightbox cursor-pointer block h-48 bg-slate-300 overflow-hidden relative" data-gallery="aljawhara-gallery" data-title="${item.t}" data-description="${item.d}">
+                        <img src="${imgSrc}" 
+                             onerror="this.onerror=null; this.src='${placeholderImg}'; this.parentElement.href='${placeholderImg}';" 
+                             loading="lazy" 
+                             alt="${item.t}" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-navy-950/20 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl text-gold-400"></i>
+                        </div>
+                    </a>
+                    <div class="p-3">
+                        <h3 class="font-bold text-navy-900 text-sm">${item.t}</h3>
+                        <p class="text-xs text-slate-500 mt-1">${item.d}</p>
+                    </div>
+                </div>`;
+            }).join('');
+
+            if (lightbox) {
+                lightbox.destroy();
+            }
+            
+            lightbox = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                zoomable: true
+            });
+        }
+
+        function renderTestimonials(data) {
+            const container = document.getElementById('testimonials-grid');
+            if (!container || !data.testimonials) return;
+
+            container.innerHTML = data.testimonials.map(item => `
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative ${data.align}" dir="${data.dir}">
+                    <div class="text-gold-400 text-sm mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">"${item.text}"</p>
+                    <div class="border-t border-slate-100 pt-3">
+                        <p class="font-bold text-navy-900 text-sm">${item.author}</p>
+                        <p class="text-xs text-slate-400">${item.role}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeLanguage(lang) {
+            const data = translations[lang];
+            if (!data) return;
+            
+            document.documentElement.dir = data.dir;
+            document.documentElement.lang = lang;
+
+            document.getElementById('page-title').innerText = data.title;
+            document.getElementById('meta-desc').setAttribute("content", data.metaDesc);
+            document.getElementById('og-title').setAttribute("content", data.title);
+            document.getElementById('og-desc').setAttribute("content", data.metaDesc);
+
+            ['ar', 'en', 'ja'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (btn) {
+                    const isActive = (l === lang);
+                    btn.className = isActive 
+                        ? "px-2 py-1 rounded bg-gold-500 text-navy-950 font-bold transition" 
+                        : "px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition";
+                    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                }
+            });
+
+            const updateText = (id, text) => {
+                const el = document.getElementById(id);
+                if (el && text !== undefined) el.innerText = text;
+            };
+
+            const updateHTML = (id, html) => {
+                const el = document.getElementById(id);
+                if (el && html !== undefined) el.innerHTML = html;
+            };
+
+            const updatePlaceholder = (id, text) => {
+                const el = document.getElementById(id);
+                if (el && text !== undefined) el.placeholder = text;
+            };
+
+            updateText('nav-subname', data.navSubname);
+            updateText('nav-services', data.navServices);
+            updateText('nav-gallery', data.navGallery);
+            updateText('nav-about', data.navAbout);
+            updateText('nav-inquiry', data.navInquiry);
+            updateText('mob-nav-services', data.navServices);
+            updateText('mob-nav-gallery', data.navGallery);
+            updateText('mob-nav-about', data.navAbout);
+            updateText('mob-nav-inquiry', data.navInquiry);
+
+            updateHTML('hero-title', data.heroTitle);
+            updateText('hero-desc', data.heroDesc);
+            updateText('hero-btn-quote', data.heroBtnQuote);
+            updateText('hero-btn-about', data.heroBtnAbout);
+
+            updateText('tb-1', data.tb1);
+            updateText('tb-2', data.tb2);
+            updateText('tb-3', data.tb3);
+            updateText('tb-4', data.tb4);
+
+            updateText('services-title', data.servicesTitle);
+            updateText('services-subtitle', data.servicesSubtitle);
+            updateText('s1-title', data.s1Title);
+            updateText('s1-tag', data.s1Tag);
+            updateText('s1-desc', data.s1Desc);
+            updateText('s2-title', data.s2Title);
+            updateText('s2-tag', data.s2Tag);
+            updateText('s2-desc', data.s2Desc);
+            updateText('s3-title', data.s3Title);
+            updateText('s3-tag', data.s3Tag);
+            updateText('s3-desc', data.s3Desc);
+
+            updateText('gallery-title', data.galleryTitle);
+            updateText('gallery-subtitle', data.gallerySubtitle);
+
+            updateText('about-title', data.aboutTitle);
+            updateText('about-subtitle', data.aboutSubtitle);
+            updateText('lbl-cname', data.lblCname);
+            updateText('val-cname-text', data.valCnameText);
+            updateText('lbl-jp-office', data.lblJpOffice);
+            updateText('val-jp-office-text', data.valJpOfficeText);
+            updateText('map-jp-link', data.mapJpLink);
+            updateText('lbl-eg-office', data.lblEgOffice);
+            updateText('val-eg-office-text', data.valEgOfficeText);
+            updateText('map-eg-link', data.mapEgLink);
+            updateText('lbl-jp-since', data.lblJpSince);
+            updateText('val-jp-since', data.valJpSince);
+            updateText('lbl-eg-since', data.lblEgSince);
+            updateText('val-eg-since', data.valEgSince);
+
+            updateText('testi-title', data.testiTitle);
+            updateText('testi-subtitle', data.testiSubtitle);
+            renderTestimonials(data);
+
+            updateText('form-title', data.formTitle);
+            updateText('form-subtitle', data.formSubtitle);
+            updateText('lbl-name', data.lblName);
+            updatePlaceholder('clientName', data.phName);
+            updateText('lbl-brand', data.lblBrand);
+            
+            const brandSelect = document.getElementById('carBrand');
+            if (brandSelect && data.brandOptions) {
+                Array.from(brandSelect.options).forEach((opt, idx) => {
+                    if (data.brandOptions[idx]) {
+                        opt.text = data.brandOptions[idx];
+                        opt.value = data.brandOptions[idx];
+                    }
+                });
+            }
+
+            updateText('lbl-dest', data.lblDest);
+            updatePlaceholder('destination', data.phDest);
+            updateText('lbl-type', data.lblType);
+            
+            const orderSelect = document.getElementById('orderType');
+            if (orderSelect && data.orderOptions) {
+                Array.from(orderSelect.options).forEach((opt, idx) => {
+                    if (data.orderOptions[idx]) opt.text = data.orderOptions[idx];
+                });
+            }
+
+            updateText('lbl-details', data.lblDetails);
+            updatePlaceholder('orderDetails', data.phDetails);
+            updateText('btn-submit', data.btnSubmit);
+            updateText('alert-msg', data.alertMsg);
+            updateText('attach-notice', data.attachNotice);
+
+            updateText('footer-text', data.footerText);
+
+            renderGallery(lang);
+        }
+
+        function sendToWhatsApp(event) {
+            if (event) event.preventDefault();
+
+            const name = document.getElementById('clientName').value.trim();
+            const brand = document.getElementById('carBrand').value;
+            const dest = document.getElementById('destination').value.trim();
+            const type = document.getElementById('orderType').value;
+            const details = document.getElementById('orderDetails').value.trim();
+
+            if(!name || !dest || !details) {
+                alert("يرجى ملء كافة الحقول قبل الإرسال / Please fill all required fields");
+                return;
+            }
+
+            const alertBox = document.getElementById('formAlert');
+            if (alertBox) {
+                alertBox.classList.remove('hidden');
+            }
+
+            const message = `طلب تسعيرة استيراد - الجوهرة\n----------------------------------\n👤 الاسم: ${name}\n🚗 الشركة/الماركة: ${brand}\n📍 الوجهة/الميناء: ${dest}\n🏷️ نوع الطلب: ${type}\n📦 تفاصيل الطلب: ${details}`;
+            const encodedMessage = encodeURIComponent(message);
+            
+            setTimeout(() => {
+                window.open(`https://wa.me/201050003380?text=${encodedMessage}`, '_blank');
+            }, 600);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage('ar');
+        });
+    </script>
+</body>
+</html>
