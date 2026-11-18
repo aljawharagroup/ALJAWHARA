@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ja" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd</title>
+    <title id="page-title">アルジャウハラ グループ株式会社 | 中古車・自動車部品輸出</title>
     
     <!-- SEO & Social Media Meta Tags -->
-    <meta name="description" id="meta-desc" content="متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.">
-    <meta property="og:title" id="og-title" content="الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd">
-    <meta property="og:description" id="og-desc" content="متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.">
+    <meta name="description" id="meta-desc" content="日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込作業を直輸出いたします。">
+    <meta property="og:title" id="og-title" content="アルジャウハラ グループ株式会社 | 中古車・自動車部品輸出">
+    <meta property="og:description" id="og-desc" content="日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込作業を直輸出いたします。">
     <meta property="og:image" content="logo.jpg">
     <meta property="og:type" content="website">
 
@@ -55,15 +55,15 @@
     <div class="fixed bottom-0 left-0 right-0 bg-navy-950 border-t border-gold-500/30 py-2 px-4 z-50 flex justify-around items-center md:hidden shadow-2xl">
         <a href="https://wa.me/201050003380" target="_blank" class="flex flex-col items-center text-green-400 text-xs font-bold gap-1">
             <i class="fa-brands fa-whatsapp text-xl"></i>
-            <span>واتساب</span>
+            <span>WhatsApp</span>
         </a>
-        <a href="tel:+818047528080" class="flex flex-col items-center text-gold-400 text-xs font-bold gap-1">
+        <a href="tel:0433104035" class="flex flex-col items-center text-gold-400 text-xs font-bold gap-1">
             <i class="fa-solid fa-phone text-lg"></i>
-            <span>اليابان</span>
+            <span>Japan</span>
         </a>
         <a href="#contact" class="flex flex-col items-center text-slate-200 text-xs font-bold gap-1">
             <i class="fa-solid fa-file-pen text-lg"></i>
-            <span>طلب تسعيرة</span>
+            <span>Inquiry</span>
         </a>
     </div>
 
@@ -71,38 +71,39 @@
     <header class="bg-navy-900 text-white sticky top-0 z-40 shadow-lg border-b border-gold-500/30">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="logo.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/0b1320/f3c669?text=ALJAWHARA';" alt="ALJAWHARA Co., Ltd Logo" class="h-12 w-12 rounded-full border border-gold-500 object-cover" loading="eager">
+                <img src="logo.jpg" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/0b1320/f3c669?text=ALJAWHARA';" alt="ALJAWHARA GROUP Co., Ltd Logo" class="h-12 w-12 rounded-full border border-gold-500 object-cover" loading="eager">
                 <div>
-                    <span class="text-lg md:text-xl font-bold tracking-wider block text-gold-400" dir="ltr">ALJAWHARA Co., Ltd</span>
-                    <span id="nav-subname" class="text-xs text-slate-300 block">الجوهرة للاستيراد والتصدير</span>
+                    <span class="text-lg md:text-xl font-bold tracking-wider block text-gold-400" dir="ltr">ALJAWHARA GROUP Co., Ltd</span>
+                    <span id="nav-subname" class="text-xs text-slate-300 block">アルジャウハラ グループ株式会社 | 中古車・自動車部品輸出</span>
                 </div>
             </div>
 
             <div class="flex items-center gap-3">
+                <!-- أزرار تبديل اللغة (اليابانية افتراضياً) -->
                 <div class="flex items-center bg-navy-800 border border-gold-500/40 rounded-lg p-1 text-xs font-bold gap-1" role="group" aria-label="Language Switcher">
-                    <button id="btn-ar" onclick="changeLanguage('ar')" aria-pressed="true" class="px-2 py-1 rounded bg-gold-500 text-navy-950 font-bold transition">عربي</button>
+                    <button id="btn-ja" onclick="changeLanguage('ja')" aria-pressed="true" class="px-2 py-1 rounded bg-gold-500 text-navy-950 font-bold transition">日本語</button>
                     <button id="btn-en" onclick="changeLanguage('en')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">EN</button>
-                    <button id="btn-ja" onclick="changeLanguage('ja')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">日本語</button>
+                    <button id="btn-ar" onclick="changeLanguage('ar')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">عربي</button>
                 </div>
 
                 <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-                    <a id="nav-services" href="#services" class="hover:text-gold-400 transition">الخدمات</a>
-                    <a id="nav-gallery" href="#gallery" class="hover:text-gold-400 transition">معرض الأعمال</a>
-                    <a id="nav-about" href="#about" class="hover:text-gold-400 transition">عن الشركة</a>
-                    <a id="nav-inquiry" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 px-5 py-2 rounded-md font-bold transition shadow-md">أطلب الآن</a>
+                    <a id="nav-services" href="#services" class="hover:text-gold-400 transition">事業内容</a>
+                    <a id="nav-gallery" href="#gallery" class="hover:text-gold-400 transition">ギャラリー</a>
+                    <a id="nav-about" href="#about" class="hover:text-gold-400 transition">会社概要</a>
+                    <a id="nav-inquiry" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 px-5 py-2 rounded-md font-bold transition shadow-md">お問い合わせ</a>
                 </nav>
 
-                <button onclick="toggleMobileMenu()" aria-label="فتح القائمة" class="md:hidden text-gold-400 text-2xl px-2 focus:outline-none">
+                <button onclick="toggleMobileMenu()" aria-label="メニューを開く" class="md:hidden text-gold-400 text-2xl px-2 focus:outline-none">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-t border-gold-500/20 px-4 py-4 space-y-3 text-sm">
-            <a id="mob-nav-services" href="#services" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">الخدمات</a>
-            <a id="mob-nav-gallery" href="#gallery" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">معرض الأعمال</a>
-            <a id="mob-nav-about" href="#about" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">عن الشركة</a>
-            <a id="mob-nav-inquiry" href="#contact" onclick="toggleMobileMenu()" class="block bg-gold-500 text-navy-950 text-center py-2 rounded font-bold">أطلب الآن</a>
+            <a id="mob-nav-services" href="#services" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">事業内容</a>
+            <a id="mob-nav-gallery" href="#gallery" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">ギャラリー</a>
+            <a id="mob-nav-about" href="#about" onclick="toggleMobileMenu()" class="block hover:text-gold-400 py-1">会社概要</a>
+            <a id="mob-nav-inquiry" href="#contact" onclick="toggleMobileMenu()" class="block bg-gold-500 text-navy-950 text-center py-2 rounded font-bold">お問い合わせ</a>
         </div>
     </header>
 
@@ -110,39 +111,39 @@
     <section class="relative bg-navy-900 text-white py-20 px-4 text-center border-b border-gold-600/20">
         <div class="max-w-7xl mx-auto">
             <div class="inline-flex items-center gap-2 bg-navy-800 border border-gold-500/40 px-4 py-1.5 rounded-full text-gold-400 text-xs font-semibold mb-6">
-                <span>EGYPT 🇪🇬 ⇄ JAPAN 🇯🇵</span>
+                <span>JAPAN 🇯🇵 ⇄ EGYPT 🇪🇬</span>
                 <span>•</span>
-                <span id="hero-badge-since">SINCE 2020</span>
+                <span id="hero-badge-since">SINCE 2026</span>
             </div>
             <h1 id="hero-title" class="text-3xl md:text-5xl font-extrabold mt-1 mb-6 leading-tight">
-                الجوهرة للاستيراد والتصدير <br>
-                <span class="text-gold-400 text-2xl md:text-4xl">تصدير السيارات، المحركات، قطع الغيار، والأنصاف المقطوعة من اليابان</span>
+                アルジャウハラ グループ株式会社 <br>
+                <span class="text-gold-400 text-2xl md:text-4xl">中古車、エンジン、自動車部品の輸出専門</span>
             </h1>
             <p id="hero-desc" class="text-slate-300 max-w-3xl mx-auto text-base md:text-lg mb-8 leading-relaxed">
-                متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة إلى مصر وكافة دول العالم.
+                日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込（バンニング）作業をエジプトおよび世界各国へ直輸出いたします。
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a id="hero-btn-quote" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold py-3 px-8 rounded-lg shadow-lg transition">طلب تسعيرة قطعة / محرك</a>
-                <a id="hero-btn-about" href="#about" class="bg-navy-800 hover:bg-navy-800/80 text-gold-400 font-bold py-3 px-6 rounded-lg border border-gold-500/40 transition">بيانات الشركة الرسمية</a>
+                <a id="hero-btn-quote" href="#contact" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold py-3 px-8 rounded-lg shadow-lg transition">見積もり・パーツ問い合わせ</a>
+                <a id="hero-btn-about" href="#about" class="bg-navy-800 hover:bg-navy-800/80 text-gold-400 font-bold py-3 px-6 rounded-lg border border-gold-500/40 transition">公式会社概要を見る</a>
             </div>
 
             <!-- Trust Badges Bar -->
             <div class="mt-12 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
                 <div class="flex flex-col items-center p-2">
                     <i class="fa-solid fa-circle-check text-gold-400 text-2xl mb-2"></i>
-                    <span id="tb-1" class="text-xs text-slate-300 font-medium">محركات مفحوصة 100%</span>
+                    <span id="tb-1" class="text-xs text-slate-300 font-medium">100%動作確認済みエンジン</span>
                 </div>
                 <div class="flex flex-col items-center p-2">
                     <i class="fa-solid fa-ship text-gold-400 text-2xl mb-2"></i>
-                    <span id="tb-2" class="text-xs text-slate-300 font-medium">شحن آمن وتستيف احترافي</span>
+                    <span id="tb-2" class="text-xs text-slate-300 font-medium">安全・確実なバンニング技術</span>
                 </div>
                 <div class="flex flex-col items-center p-2">
                     <i class="fa-solid fa-award text-gold-400 text-2xl mb-2"></i>
-                    <span id="tb-3" class="text-xs text-slate-300 font-medium">خبرة من المزاد لساحتك مباشرة</span>
+                    <span id="tb-3" class="text-xs text-slate-300 font-medium">オークション直接調達の実績</span>
                 </div>
                 <div class="flex flex-col items-center p-2">
                     <i class="fa-solid fa-headset text-gold-400 text-2xl mb-2"></i>
-                    <span id="tb-4" class="text-xs text-slate-300 font-medium">دعم وتواصل مباشر عبر الواتساب</span>
+                    <span id="tb-4" class="text-xs text-slate-300 font-medium">WhatsAppによる迅速サポート</span>
                 </div>
             </div>
         </div>
@@ -151,9 +152,9 @@
     <!-- Services Grid -->
     <section id="services" class="py-16 max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 id="services-title" class="text-3xl font-bold text-navy-900">خدماتنا الرئيسية</h2>
+            <h2 id="services-title" class="text-3xl font-bold text-navy-900">主な事業内容</h2>
             <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
-            <p id="services-subtitle" class="text-slate-600">حلول متكاملة لاستيراد وتصدير قطع السيارات من المزادات اليابانية مباشرة.</p>
+            <p id="services-subtitle" class="text-slate-600">日本のオークション会場から直接パーツ調達・輸出までのワンストップソリューション</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -161,25 +162,25 @@
                 <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
                     <i class="fa-solid fa-gears" aria-hidden="true"></i>
                 </div>
-                <h3 id="s1-title" class="text-xl font-bold text-navy-900 mb-1">المحركات والقطع الميكانيكية</h3>
+                <h3 id="s1-title" class="text-xl font-bold text-navy-900 mb-1">エンジン・駆動系パーツ</h3>
                 <p id="s1-tag" class="text-gold-600 text-xs font-semibold mb-3">JDM Tested Engines & Transmissions</p>
-                <p id="s1-desc" class="text-slate-600 text-sm leading-relaxed">توفير المحركات المفحوصة (Toyota, Mitsubishi, Nissan, Mazda) مع ناقل الحركة (الجيربوكس)، الضفيرة، والكمبيوتر جاهزة للتصدير.</p>
+                <p id="s1-desc" class="text-slate-600 text-sm leading-relaxed">動作確認済みエンジン（トヨタ、三菱、日産、マツダ）をミッション、ハーネス、ECU一式付きで輸出手配いたします。</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold-500 hover:shadow-xl transition">
                 <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
                     <i class="fa-solid fa-scissors" aria-hidden="true"></i>
                 </div>
-                <h3 id="s2-title" class="text-xl font-bold text-navy-900 mb-1">قص الأنصاف والأوجه (Half Cuts)</h3>
+                <h3 id="s2-title" class="text-xl font-bold text-navy-900 mb-1">ハーフカット・ボディ解体作業</h3>
                 <p id="s2-tag" class="text-gold-600 text-xs font-semibold mb-3">Custom Dismantling & Front Cuts</p>
-                <p id="s2-desc" class="text-slate-600 text-sm leading-relaxed">تفكيك وقص السيارات حسب الطلب (أنصاف أمامية Nose Cuts، أنصاف خلفية، أجزاء الصاج والهيكل) بأعلى معايير الدقة.</p>
+                <p id="s2-desc" class="text-slate-600 text-sm leading-relaxed">お客様のご要望に応じたフロントカット（ノーズカット）、リアカット、外装・ボディパーツの精密解体作業。</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-gold-500 hover:shadow-xl transition">
                 <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-lg flex items-center justify-center text-2xl mb-4">
                     <i class="fa-solid fa-box-archive" aria-hidden="true"></i>
                 </div>
-                <h3 id="s3-title" class="text-xl font-bold text-navy-900 mb-1">تستيف وشحن الحاويات (Vanning)</h3>
+                <h3 id="s3-title" class="text-xl font-bold text-navy-900 mb-1">コンテナバンニング（詰込作業）</h3>
                 <p id="s3-tag" class="text-gold-600 text-xs font-semibold mb-3">Container Loading 20ft / 40ft HQ</p>
-                <p id="s3-desc" class="text-slate-600 text-sm leading-relaxed">تجهيز وتحميل الحاويات وتستيف القطع باحترافية لتوفير المجمعات والمساحات وتقليل تكلفة الشحن للمستورد.</p>
+                <p id="s3-desc" class="text-slate-600 text-sm leading-relaxed">20ft/40ftハイキューブコンテナへの効率的な積載・バンニング作業により、海上運賃コストを最適化します。</p>
             </div>
         </div>
     </section>
@@ -188,9 +189,9 @@
     <section id="gallery" class="bg-slate-200 py-16 border-t border-b border-slate-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 id="gallery-title" class="text-3xl font-bold text-navy-900">معرض الأعمال والساحة اليابانية</h2>
+                <h2 id="gallery-title" class="text-3xl font-bold text-navy-900">作業ギャラリー・ヤード風景</h2>
                 <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
-                <p id="gallery-subtitle" class="text-slate-600">نماذج من شحناتنا، فحص المحركات، وتستيف الحاويات في موقع الشركة باليابان (اضغط على الصورة للتكبير)</p>
+                <p id="gallery-subtitle" class="text-slate-600">日本ヤードでのエンジンテスト、ハーフカット解体、コンテナ積載作業の様子（クリックで拡大）</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid"></div>
@@ -201,43 +202,44 @@
     <section id="about" class="bg-white py-16 border-t border-slate-200">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-10">
-                <h2 id="about-title" class="text-3xl font-bold text-navy-900">بيانات الشركة والمواقع الرسمية</h2>
+                <h2 id="about-title" class="text-3xl font-bold text-navy-900">公式会社概要・所在地</h2>
                 <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
-                <p id="about-subtitle" class="text-slate-600 text-sm">تفاصيل التسجيل الرسمي للشركة ومواقعنا عبر خرائط جوجل</p>
+                <p id="about-subtitle" class="text-slate-600 text-sm">アルジャウハラ 株式会社 コーポレート情報およびアクセスマップ</p>
             </div>
 
             <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm">
                 <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
                     <div class="border-b border-slate-200 pb-3 md:col-span-2">
-                        <dt id="lbl-cname" class="text-slate-500 font-semibold">اسم الشركة</dt>
+                        <dt id="lbl-cname" class="text-slate-500 font-semibold">会社名</dt>
                         <dd class="text-navy-900 font-bold text-base mt-1">
-                            <span id="val-cname-text">شركة الجوهرة</span> | <span dir="ltr" class="inline-block">ALJAWHARA Co., Ltd</span>
+                            <span id="val-cname-text">アルジャウハラ 株式会社</span> | <span dir="ltr" class="inline-block">ALJAWHARA Co., Ltd</span>
                         </dd>
                     </div>
                     <div class="border-b border-slate-200 pb-3">
-                        <dt id="lbl-jp-office" class="text-slate-500 font-semibold">المقر في اليابان (Location Japan)</dt>
+                        <dt id="lbl-jp-office" class="text-slate-500 font-semibold">日本本社</dt>
                         <dd class="text-navy-900 font-bold mt-1">
                             <span id="val-jp-office-text" dir="ltr" class="inline-block">〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan</span>
                         </dd>
-                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:+818047528080" class="hover:underline">+81 80-4752-8080</a></dd>
+                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:0433104035" class="hover:underline">043-310-4035</a></dd>
+                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-fax text-gold-600" aria-hidden="true"></i> FAX: <span dir="ltr">043-310-4036</span></dd>
                         <a href="https://maps.app.goo.gl/Gci6BKidrtYdGXbU6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
-                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-jp-link">عرض الموقع على خرائط جوجل</span>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-jp-link">Google Mapで見る</span>
                         </a>
                     </div>
                     <div class="border-b border-slate-200 pb-3">
-                        <dt id="lbl-eg-office" class="text-slate-500 font-semibold">المقر في مصر (Location Egypt)</dt>
-                        <dd id="val-eg-office-text" class="text-navy-900 font-bold mt-1">شارع المستشارين - المنصورة - الدقهلية - مصر</dd>
+                        <dt id="lbl-eg-office" class="text-slate-500 font-semibold">エジプト支社</dt>
+                        <dd id="val-eg-office-text" class="text-navy-900 font-bold mt-1">エジプト・ダカハリーヤ県マンスーラ</dd>
                         <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:+201050003380" class="hover:underline">+20 1050003380</a></dd>
                         <a href="https://maps.app.goo.gl/Mkyidf1DiLdL6ngKA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
-                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-eg-link">عرض الموقع على خرائط جوجل</span>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-eg-link">Google Mapで見る</span>
                         </a>
                     </div>
                     <div class="border-b border-slate-200 pb-3">
-                        <dt id="lbl-jp-since" class="text-slate-500 font-semibold">سنة التأسيس (اليابان)</dt>
+                        <dt id="lbl-jp-since" class="text-slate-500 font-semibold">設立年（日本）</dt>
                         <dd id="val-jp-since" class="text-navy-900 font-bold text-base mt-1">SINCE 2026</dd>
                     </div>
                     <div class="border-b border-slate-200 pb-3">
-                        <dt id="lbl-eg-since" class="text-slate-500 font-semibold">سنة التأسيس (مصر)</dt>
+                        <dt id="lbl-eg-since" class="text-slate-500 font-semibold">設立年（エジプト）</dt>
                         <dd id="val-eg-since" class="text-navy-900 font-bold text-base mt-1">SINCE 2020</dd>
                     </div>
                 </dl>
@@ -245,78 +247,65 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-slate-50 py-16 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 id="testi-title" class="text-3xl font-bold text-navy-900">آراء ثقة العملاء والمستوردين</h2>
-                <div class="w-16 h-1 bg-gold-500 mx-auto mt-2 mb-3 rounded"></div>
-                <p id="testi-subtitle" class="text-slate-600">ما يقوله شركاؤنا ومستوردو قطع السيارات حول العالم</p>
-            </div>
-
-            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6"></div>
-        </div>
-    </section>
-
     <!-- Contact & Direct Inquiry Form -->
     <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
         <div class="bg-navy-900 text-white rounded-2xl p-8 shadow-2xl border border-gold-500/30">
-            <h2 id="form-title" class="text-2xl font-bold text-center text-gold-400 mb-2">طلب تسعيرة واستفسار مباشر</h2>
-            <p id="form-subtitle" class="text-slate-300 text-center text-sm mb-6">أدخل كود المحرك، نوع السيارة، أو تفاصيل الحاوية المطلوبة</p>
+            <h2 id="form-title" class="text-2xl font-bold text-center text-gold-400 mb-2">直接お問い合わせ・お見積りフォーム</h2>
+            <p id="form-subtitle" class="text-slate-300 text-center text-sm mb-6">エンジン型式、車種、またはコンテナ案件の詳細をご入力ください</p>
 
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" class="space-y-4">
                 <div class="grid md:grid-cols-2 gap-4">
                     <div>
-                        <label id="lbl-name" for="clientName" class="block text-xs font-semibold uppercase mb-1 text-slate-300">الاسم / اسم الشركة</label>
-                        <input type="text" id="clientName" placeholder="مثال: شركة الجوهرة لقطع الغيار" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
+                        <label id="lbl-name" for="clientName" class="block text-xs font-semibold uppercase mb-1 text-slate-300">お名前 / 貴社名</label>
+                        <input type="text" id="clientName" placeholder="例：ALJAWHARA Auto Parts Co." class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
                     </div>
                     <div>
-                        <label id="lbl-brand" for="carBrand" class="block text-xs font-semibold uppercase mb-1 text-slate-300">ماركة السيارة / المصنع</label>
-                        <select id="carBrand" aria-label="ماركة السيارة" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
-                            <option value="Toyota (تويوتا)">Toyota (تويوتا)</option>
-                            <option value="Mitsubishi (ميتسوبيشي)">Mitsubishi (ميتسوبيشي)</option>
-                            <option value="Nissan (نيسان)">Nissan (نيسان)</option>
-                            <option value="Mazda (مازدا)">Mazda (مازدا)</option>
-                            <option value="Honda (هوندا)">Honda (هوندا)</option>
-                            <option value="Subaru / أخرى">Subaru / أخرى</option>
+                        <label id="lbl-brand" for="carBrand" class="block text-xs font-semibold uppercase mb-1 text-slate-300">自動車メーカー</label>
+                        <select id="carBrand" aria-label="自動車メーカー" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
+                            <option value="トヨタ (Toyota)">トヨタ (Toyota)</option>
+                            <option value="三菱 (Mitsubishi)">三菱 (Mitsubishi)</option>
+                            <option value="日産 (Nissan)">日産 (Nissan)</option>
+                            <option value="マツダ (Mazda)">マツダ (Mazda)</option>
+                            <option value="ホンダ (Honda)">ホンダ (Honda)</option>
+                            <option value="スバル / その他 (Subaru / Other)">スバル / その他 (Subaru / Other)</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-4">
                     <div>
-                        <label id="lbl-dest" for="destination" class="block text-xs font-semibold uppercase mb-1 text-slate-300">الميناء / وجهة الوصول</label>
-                        <input type="text" id="destination" placeholder="مثال: مصر - ميناء الإسكندرية" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
+                        <label id="lbl-dest" for="destination" class="block text-xs font-semibold uppercase mb-1 text-slate-300">仕向地 / 陸揚港</label>
+                        <input type="text" id="destination" placeholder="例：エジプト アレクサンドリア港" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required>
                     </div>
                     <div>
-                        <label id="lbl-type" for="orderType" class="block text-xs font-semibold uppercase mb-1 text-slate-300">تصنيف الطلب</label>
-                        <select id="orderType" aria-label="تصنيف الطلب" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
-                            <option value="محركات وقطع ميكانيكية (Engines)">محركات وقطع ميكانيكية (Tested Engines)</option>
-                            <option value="قص أنصاف وأوجه (Half Cuts)">قص أنصاف وأوجه (Half Cuts / Nose Cuts)</option>
-                            <option value="تستيف وشحن حاوية كاملة (Container Loading)">تستيف وشحن حاوية كاملة (Container Loading 20ft/40ft)</option>
-                            <option value="استفسار عام (General Inquiry)">استفسار عام (General Inquiry)</option>
+                        <label id="lbl-type" for="orderType" class="block text-xs font-semibold uppercase mb-1 text-slate-300">お問い合わせ区分</label>
+                        <select id="orderType" aria-label="お問い合わせ区分" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500">
+                            <option value="動作確認済みエンジン・駆動系部品">動作確認済みエンジン・駆動系部品</option>
+                            <option value="ハーフカット・ノーズカット解体">ハーフカット・ノーズカット解体</option>
+                            <option value="コンテナバンニング（20ft/40ft）">コンテナバンニング（20ft/40ft）</option>
+                            <option value="その他・一般お問い合わせ">その他・一般お問い合わせ</option>
                         </select>
                     </div>
                 </div>
 
                 <div>
-                    <label id="lbl-details" for="orderDetails" class="block text-xs font-semibold uppercase mb-1 text-slate-300">تفاصيل الطلب (أكواد المحركات، أنصاف قطع، حاويات)</label>
-                    <textarea id="orderDetails" rows="4" placeholder="مثال: مطلوب محرك 2ZR-FXE مع الكيربكس، وطلب أسعار شحن حاوية 40 قدم." class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required></textarea>
+                    <label id="lbl-details" for="orderDetails" class="block text-xs font-semibold uppercase mb-1 text-slate-300">お問い合わせ内容 (エンジン型式、パーツ、コンテナ)</label>
+                    <textarea id="orderDetails" rows="4" placeholder="例: 2ZR-FXE エンジンの見積もり、および40ftコンテナバンニング費用について。" class="w-full bg-navy-800 border border-slate-700 rounded px-3 py-2 text-white focus:outline-none focus:border-gold-500" required></textarea>
                 </div>
                 
                 <div class="pt-2">
                     <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold py-3.5 rounded-lg transition flex items-center justify-center gap-2 shadow-lg">
                         <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
-                        <span id="btn-submit">إرسال عبر الواتساب</span>
+                        <span id="btn-submit">WhatsAppで送信</span>
                     </button>
                 </div>
 
                 <div id="formAlert" class="hidden bg-green-500/20 border border-green-500 text-green-300 p-3 rounded-lg text-xs text-center">
-                    <i class="fa-solid fa-circle-check ml-1"></i> <span id="alert-msg">جاري تحويلك إلى الواتساب لإتمام طلبك ومتابعة المبيعات...</span>
+                    <i class="fa-solid fa-circle-check ml-1"></i> <span id="alert-msg">WhatsAppへ転送中...</span>
                 </div>
 
                 <p id="attach-notice" class="text-xs text-slate-400 mt-2 text-center">
-                    💡 يمكنك إرفاق صور القطع أو قوائم الأكواد مباشرة بعد الانتقال لربط الواتساب.
+                    💡 WhatsAppに移動後、パーツの写真やファイルを追加で送信できます。
                 </p>
             </form>
         </div>
@@ -324,7 +313,7 @@
 
     <!-- Footer -->
     <footer class="bg-navy-950 text-slate-400 text-center py-6 text-xs border-t border-slate-800">
-        <p id="footer-text">© 2026 الجوهرة للاستيراد والتصدير - ALJAWHARA Co., Ltd. جميع الحقوق محفوظة.</p>
+        <p id="footer-text">© 2026 アルジャウハラ グループ株式会社 All rights reserved.</p>
     </footer>
 
     <!-- GLightbox JS -->
@@ -336,7 +325,7 @@
 
         const galleryData = {
             ar: [
-                { t: "فحص وااختبار المحركات", d: "اختبار الجودة والتأكد من كفاءة المحركات." },
+                { t: "فحص واختبار المحركات", d: "اختبار الجودة والتأكد من كفاءة المحركات." },
                 { t: "قص وتجهيز الأنصاف", d: "تجهيز الأنصاف الأمامية والخلفية بحرفية." },
                 { t: "تستيف وتحميل الحاويات", d: "استغلال المساحات وتأمين الشحنة بالنقل البحري." },
                 { t: "شحنات وقطع غيار", d: "معاينة وتجهيز الطلبيات الخاصة بالعملاء." },
@@ -383,14 +372,14 @@
             ar: {
                 dir: "rtl",
                 align: "text-right",
-                title: "الجوهرة للاستيراد والتصدير | ALJAWHARA Co., Ltd",
+                title: "الجوهرة جروب للاستيراد والتصدير | ALJAWHARA GROUP Co., Ltd",
                 metaDesc: "متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة.",
-                navSubname: "الجوهرة للاستيراد والتصدير",
+                navSubname: "الجوهرة جروب للاستيراد والتصدير",
                 navServices: "الخدمات",
                 navGallery: "معرض الأعمال",
                 navAbout: "عن الشركة",
                 navInquiry: "أطلب الآن",
-                heroTitle: "الجوهرة للاستيراد والتصدير <br><span class='text-gold-400 text-2xl md:text-4xl'>تصدير السيارات، المحركات، قطع الغيار، والأنصاف المقطوعة من اليابان</span>",
+                heroTitle: "الجوهرة جروب للاستيراد والتصدير <br><span class='text-gold-400 text-2xl md:text-4xl'>تصدير السيارات، المحركات، قطع الغيار، والأنصاف المقطوعة من اليابان</span>",
                 heroDesc: "متخصصون في توريد السيارات وقطع الغيار الأصلية، قص الأنصاف (Half Cuts)، تجهيز المحركات المفحوصة وشحن الحاويات من اليابان مباشرة إلى مصر وكافة دول العالم.",
                 heroBtnQuote: "طلب تسعيرة قطعة / محرك",
                 heroBtnAbout: "بيانات الشركة الرسمية",
@@ -412,7 +401,7 @@
                 galleryTitle: "معرض الأعمال والساحة اليابانية",
                 gallerySubtitle: "نماذج من شحناتنا، فحص المحركات، وتستيف الحاويات في موقع الشركة باليابان (اضغط على الصورة للتكبير)",
                 aboutTitle: "بيانات الشركة والمواقع الرسمية",
-                aboutSubtitle: "تفاصيل التسجيل الرسمي للشركة ومواقعنا عبر خرائط جوجل",
+                aboutSubtitle: "تفاصيل التسجيل الرسمي لشركة الجوهرة ومواقعنا عبر خرائط جوجل",
                 lblCname: "اسم الشركة",
                 valCnameText: "شركة الجوهرة",
                 lblJpOffice: "المقر في اليابان (Location Japan)",
@@ -425,25 +414,6 @@
                 valJpSince: "SINCE 2026",
                 lblEgSince: "سنة التأسيس (مصر)",
                 valEgSince: "SINCE 2020",
-                testiTitle: "آراء ثقة العملاء والمستوردين",
-                testiSubtitle: "ما يقوله شركاؤنا ومستوردو قطع السيارات حول العالم",
-                testimonials: [
-                    {
-                        text: "تعامل راقي جداً وتستيف الحاوية 40 قدم كان استغلال ممتاز للمساحة والقطع جاءت مفحوصة وسليمة 100%.",
-                        author: "م/ أحمد زكي",
-                        role: "مستورد - القاهرة، مصر"
-                    },
-                    {
-                        text: "الأنصاف الأمامية (Nose Cuts) كانت مقصوصة بدقة وكافة الظفائر والكمبيوترات كانت كاملة وبحالة ممتازة.",
-                        author: "شركة السلام لقطع الغيار",
-                        role: "المنصورة، مصر"
-                    },
-                    {
-                        text: "سرعة في تجهيز المحركات المفحوصة والمتابعة خطوة بخطوة بالصور والفيديوهات أثناء التحميل باليابان.",
-                        author: "المركز الدولي للمحركات",
-                        role: "الإسكندرية، مصر"
-                    }
-                ],
                 formTitle: "طلب تسعيرة واستفسار مباشر",
                 formSubtitle: "أدخل كود المحرك، نوع السيارة، أو تفاصيل الحاوية المطلوبة",
                 lblName: "الاسم / اسم الشركة",
@@ -471,19 +441,19 @@
                 btnSubmit: "إرسال عبر الواتساب",
                 alertMsg: "جاري تحويلك إلى الواتساب لإتمام طلبك ومتابعة المبيعات...",
                 attachNotice: "💡 يمكنك إرفاق صور القطع أو قوائم الأكواد مباشرة بعد الانتقال لربط الواتساب.",
-                footerText: "© 2026 الجوهرة للاستيراد والتصدير - ALJAWHARA Co., Ltd. جميع الحقوق محفوظة."
+                footerText: "© 2026 الجوهرة جروب للاستيراد والتصدير - ALJAWHARA GROUP Co., Ltd. جميع الحقوق محفوظة."
             },
             en: {
                 dir: "ltr",
                 align: "text-left",
-                title: "ALJAWHARA Co., Ltd | Exporting Japanese Auto Parts",
+                title: "ALJAWHARA GROUP Co., Ltd | Exporting Japanese Auto Parts",
                 metaDesc: "Specialized in supplying JDM vehicles, tested engines, half cuts, container vanning, and logistics directly from Japan to Egypt and worldwide.",
-                navSubname: "ALJAWHARA Co., Ltd | Import & Export",
+                navSubname: "ALJAWHARA GROUP Co., Ltd | Import & Export",
                 navServices: "Services",
                 navGallery: "Gallery",
                 navAbout: "About Us",
                 navInquiry: "Inquire Now",
-                heroTitle: "ALJAWHARA Import & Export <br><span class='text-gold-400 text-2xl md:text-4xl'>Exporting Japanese Cars, Engines & Spare Parts</span>",
+                heroTitle: "ALJAWHARA GROUP Import & Export <br><span class='text-gold-400 text-2xl md:text-4xl'>Exporting Japanese Cars, Engines & Spare Parts</span>",
                 heroDesc: "Specialized in supplying JDM vehicles, tested engines, half cuts, container vanning, and logistics directly from Japan to Egypt and worldwide.",
                 heroBtnQuote: "Get Parts / Engine Quote",
                 heroBtnAbout: "Company Registration",
@@ -518,25 +488,6 @@
                 valJpSince: "SINCE 2026",
                 lblEgSince: "Established Year (Egypt)",
                 valEgSince: "SINCE 2020",
-                testiTitle: "Importers & Client Feedback",
-                testiSubtitle: "What our global auto parts partners say about us",
-                testimonials: [
-                    {
-                        text: "Very professional service. Loading the 40ft HQ container was perfectly optimized, and all engines arrived 100% tested and intact.",
-                        author: "Eng. Ahmed Zaki",
-                        role: "Importer - Cairo, Egypt"
-                    },
-                    {
-                        text: "The front nose cuts were precisely dismantled. Wiring harnesses and ECUs were completely undamaged and in excellent condition.",
-                        author: "Al-Salam Auto Parts Co.",
-                        role: "Mansoura, Egypt"
-                    },
-                    {
-                        text: "Fast processing for tested engines with step-by-step updates, photos, and video confirmation during container vanning in Japan.",
-                        author: "International Engine Center",
-                        role: "Alexandria, Egypt"
-                    }
-                ],
                 formTitle: "Direct Price Inquiry",
                 formSubtitle: "Enter engine codes, car models, or container inquiries below",
                 lblName: "Your Name / Company Name",
@@ -564,19 +515,19 @@
                 btnSubmit: "Send via WhatsApp",
                 alertMsg: "Redirecting to WhatsApp to complete your inquiry...",
                 attachNotice: "💡 You can attach photos or parts list directly after connecting to WhatsApp.",
-                footerText: "© 2026 ALJAWHARA Co., Ltd. All rights reserved."
+                footerText: "© 2026 ALJAWHARA GROUP Co., Ltd. All rights reserved."
             },
             ja: {
                 dir: "ltr",
                 align: "text-left",
-                title: "アルジャワハラ株式会社 | 中古車・自動車部品輸出",
+                title: "アルジャウハラ グループ株式会社 | 中古車・自動車部品輸出",
                 metaDesc: "日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込作業を直輸出いたします。",
-                navSubname: "アルジャワハラ株式会社 | 中古車・自動車部品輸出",
+                navSubname: "アルジャウハラ グループ株式会社 | 中古車・自動車部品輸出",
                 navServices: "事業内容",
                 navGallery: "ギャラリー",
                 navAbout: "会社概要",
                 navInquiry: "お問い合わせ",
-                heroTitle: "アルジャワハラ株式会社 <br><span class='text-gold-400 text-2xl md:text-4xl'>中古車、エンジン、自動車部品の輸出専門</span>",
+                heroTitle: "アルジャウハラ グループ株式会社 <br><span class='text-gold-400 text-2xl md:text-4xl'>中古車、エンジン、自動車部品の輸出専門</span>",
                 heroDesc: "日本全国のオートオークションより、高品質な中古車、テスト済みエンジン、ハーフカット、コンテナ詰込（バンニング）作業をエジプトおよび世界各国へ直輸出いたします。",
                 heroBtnQuote: "見積もり・パーツ問い合わせ",
                 heroBtnAbout: "公式会社概要を見る",
@@ -598,11 +549,11 @@
                 galleryTitle: "作業ギャラリー・ヤード風景",
                 gallerySubtitle: "日本ヤードでのエンジンテスト、ハーフカット解体、コンテナ積載作業の様子（クリックで拡大）",
                 aboutTitle: "公式会社概要・所在地",
-                aboutSubtitle: "アルジャワハラ 株式会社 コーポレート情報およびアクセスマップ",
+                aboutSubtitle: "アルジャウハラ 株式会社 コーポレート情報およびアクセスマップ",
                 lblCname: "会社名",
-                valCnameText: "アルジャワハラ 株式会社",
+                valCnameText: "アルジャウハラ 株式会社",
                 lblJpOffice: "日本本社",
-                valJpOfficeText: "〒284-0001 千葉県四街道市大日 427-1",
+                valJpOfficeText: "〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan",
                 mapJpLink: "Google Mapで見る",
                 lblEgOffice: "エジプト支社",
                 valEgOfficeText: "エジプト・ダカハリーヤ県マンスーラ",
@@ -611,25 +562,6 @@
                 valJpSince: "SINCE 2026",
                 lblEgSince: "設立年（エジプト）",
                 valEgSince: "SINCE 2020",
-                testiTitle: "バイヤー・輸入業者様のお声",
-                testiSubtitle: "世界各国の取引先様からいただいた評価",
-                testimonials: [
-                    {
-                        text: "非常に丁寧で迅速な対応でした。40ftコンテナのバンニング効率も素晴らしく、届いたエンジンもすべて完璧に動作確認済みでした。",
-                        author: "アーメド・ザキ 技師",
-                        role: "バイヤー - カイロ、エジプト"
-                    },
-                    {
-                        text: "ノーズカット（フロントハーフカット）のカット精度が高く、ハーネスやコンピューター類も欠品なく綺麗な状態で届きました。",
-                        author: "アル・サラム オートパーツ社",
-                        role: "マンスーラ、エジプト"
-                    },
-                    {
-                        text: "動作確認済みエンジンの手配が早く、日本ヤードでの積み込み作業時も写真や動画でステップバイステップで共有してもらえて安心でした。",
-                        author: "国際エンジンセンター",
-                        role: "アレクサンドリア、エジプト"
-                    }
-                ],
                 formTitle: "直接お問い合わせ・お見積りフォーム",
                 formSubtitle: "エンジン型式、車種、またはコンテナ案件の詳細をご入力ください",
                 lblName: "お名前 / 貴社名",
@@ -657,7 +589,7 @@
                 btnSubmit: "WhatsAppで送信",
                 alertMsg: "WhatsAppへ転送中...",
                 attachNotice: "💡 WhatsAppに移動後、パーツの写真やファイルを追加で送信できます。",
-                footerText: "© 2026 アルジョウハラ株式会社 All rights reserved."
+                footerText: "© 2026 アルジャウハラ グループ株式会社 All rights reserved."
             }
         };
 
@@ -670,7 +602,7 @@
             const container = document.getElementById('gallery-grid');
             if(!container) return;
             
-            const items = galleryData[lang] || galleryData['ar'];
+            const items = galleryData[lang] || galleryData['ja'];
             container.innerHTML = items.map((item, index) => {
                 const imgNum = index + 1;
                 const imgSrc = `yard${imgNum}.jpg`;
@@ -707,24 +639,6 @@
             });
         }
 
-        function renderTestimonials(data) {
-            const container = document.getElementById('testimonials-grid');
-            if (!container || !data.testimonials) return;
-
-            container.innerHTML = data.testimonials.map(item => `
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative ${data.align}" dir="${data.dir}">
-                    <div class="text-gold-400 text-sm mb-3">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">"${item.text}"</p>
-                    <div class="border-t border-slate-100 pt-3">
-                        <p class="font-bold text-navy-900 text-sm">${item.author}</p>
-                        <p class="text-xs text-slate-400">${item.role}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
         function changeLanguage(lang) {
             const data = translations[lang];
             if (!data) return;
@@ -737,7 +651,7 @@
             document.getElementById('og-title').setAttribute("content", data.title);
             document.getElementById('og-desc').setAttribute("content", data.metaDesc);
 
-            ['ar', 'en', 'ja'].forEach(l => {
+            ['ja', 'en', 'ar'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if (btn) {
                     const isActive = (l === lang);
@@ -813,10 +727,6 @@
             updateText('lbl-eg-since', data.lblEgSince);
             updateText('val-eg-since', data.valEgSince);
 
-            updateText('testi-title', data.testiTitle);
-            updateText('testi-subtitle', data.testiSubtitle);
-            renderTestimonials(data);
-
             updateText('form-title', data.formTitle);
             updateText('form-subtitle', data.formSubtitle);
             updateText('lbl-name', data.lblName);
@@ -865,7 +775,7 @@
             const details = document.getElementById('orderDetails').value.trim();
 
             if(!name || !dest || !details) {
-                alert("يرجى ملء كافة الحقول قبل الإرسال / Please fill all required fields");
+                alert("項目をすべて入力してください / Please fill all required fields");
                 return;
             }
 
@@ -874,7 +784,7 @@
                 alertBox.classList.remove('hidden');
             }
 
-            const message = `طلب تسعيرة استيراد - الجوهرة\n----------------------------------\n👤 الاسم: ${name}\n🚗 الشركة/الماركة: ${brand}\n📍 الوجهة/الميناء: ${dest}\n🏷️ نوع الطلب: ${type}\n📦 تفاصيل الطلب: ${details}`;
+            const message = `お見積り・お問い合わせ - ALJAWHARA GROUP\n----------------------------------\n👤 お名前: ${name}\n🚗 メーカー: ${brand}\n📍 仕向地: ${dest}\n🏷️ 区分: ${type}\n📦 内容: ${details}`;
             const encodedMessage = encodeURIComponent(message);
             
             setTimeout(() => {
@@ -883,7 +793,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('ar');
+            changeLanguage('ja');
         });
     </script>
 </body>
