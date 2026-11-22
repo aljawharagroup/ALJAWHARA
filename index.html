@@ -47,7 +47,7 @@
 <body class="bg-slate-100 text-slate-800 relative antialiased pb-16 md:pb-0">
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/201050003380" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر الواتساب" class="hidden md:flex fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 items-center justify-center transition-all duration-300 transform hover:scale-110">
+    <a href="https://wa.me/201050003380" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hidden md:flex fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 items-center justify-center transition-all duration-300 transform hover:scale-110">
         <i class="fa-brands fa-whatsapp text-3xl" aria-hidden="true"></i>
     </a>
 
@@ -79,7 +79,6 @@
             </div>
 
             <div class="flex items-center gap-3">
-                <!-- أزرار تبديل اللغة (اليابانية افتراضياً) -->
                 <div class="flex items-center bg-navy-800 border border-gold-500/40 rounded-lg p-1 text-xs font-bold gap-1" role="group" aria-label="Language Switcher">
                     <button id="btn-ja" onclick="changeLanguage('ja')" aria-pressed="true" class="px-2 py-1 rounded bg-gold-500 text-navy-950 font-bold transition">日本語</button>
                     <button id="btn-en" onclick="changeLanguage('en')" aria-pressed="false" class="px-2 py-1 rounded text-slate-300 hover:text-gold-400 transition">EN</button>
@@ -211,8 +210,10 @@
                 <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
                     <div class="border-b border-slate-200 pb-3 md:col-span-2">
                         <dt id="lbl-cname" class="text-slate-500 font-semibold">会社名</dt>
-                        <dd class="text-navy-900 font-bold text-base mt-1">
-                            <span id="val-cname-text">アルジャウハラ 株式会社</span> | <span dir="ltr" class="inline-block">ALJAWHARA Co., Ltd</span>
+                        <dd class="text-navy-900 font-bold text-base mt-1 flex flex-wrap items-center gap-1.5">
+                            <span id="val-cname-text">アルジャウハラ 株式会社</span>
+                            <span>|</span>
+                            <span dir="ltr" class="inline-block">ALJAWHARA Co., Ltd</span>
                         </dd>
                     </div>
                     <div class="border-b border-slate-200 pb-3">
@@ -220,8 +221,16 @@
                         <dd class="text-navy-900 font-bold mt-1">
                             <span id="val-jp-office-text" dir="ltr" class="inline-block">〒284-0001 427-1 Dainichi, Yotsukaido, Chiba, Japan</span>
                         </dd>
-                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:0433104035" class="hover:underline">043-310-4035</a></dd>
-                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-fax text-gold-600" aria-hidden="true"></i> FAX: <span dir="ltr">043-310-4036</span></dd>
+                        <dd id="contact-jp-tel" class="text-slate-600 mt-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i>
+                            <span>TEL:</span>
+                            <a href="tel:0433104035" dir="ltr" class="inline-block hover:underline font-medium">043-310-4035</a>
+                        </dd>
+                        <dd id="contact-jp-fax" class="text-slate-600 mt-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-fax text-gold-600" aria-hidden="true"></i>
+                            <span>FAX:</span>
+                            <span dir="ltr" class="inline-block font-medium">043-310-4036</span>
+                        </dd>
                         <a href="https://maps.app.goo.gl/Gci6BKidrtYdGXbU6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
                             <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-jp-link">Google Mapで見る</span>
                         </a>
@@ -229,7 +238,11 @@
                     <div class="border-b border-slate-200 pb-3">
                         <dt id="lbl-eg-office" class="text-slate-500 font-semibold">エジプト支社</dt>
                         <dd id="val-eg-office-text" class="text-navy-900 font-bold mt-1">エジプト・ダカハリーヤ県マンスーラ</dd>
-                        <dd class="text-slate-600 mt-1"><i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i> TEL: <a href="tel:+201050003380" class="hover:underline">+20 1050003380</a></dd>
+                        <dd id="contact-eg-tel" class="text-slate-600 mt-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i>
+                            <span>TEL:</span>
+                            <a href="tel:+201050003380" dir="ltr" class="inline-block hover:underline font-medium">+20 1050003380</a>
+                        </dd>
                         <a href="https://maps.app.goo.gl/Mkyidf1DiLdL6ngKA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gold-600 hover:underline mt-2 font-semibold">
                             <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="map-eg-link">Google Mapで見る</span>
                         </a>
@@ -323,48 +336,52 @@
     <script>
         let lightbox = null;
 
+        // الترتيب المعدل:
+        // 1- الساحة اليابانية | 2- فحص واختبار المحركات | 3- فحص وتجهيز المحركات | 4- معاينة قطع السيارات
+        // 5- تجهيز الصاج والهيكل | 6- قص وتجهيز الأنصاف | 7- أنصاف أمامية Nose Cuts | 8- تجهيز الشحنات للتصدير
+        // 9- تستيف وتحميل الحاويات | 10- تحميل الحاويات 40 قدم / 20 قدم | 11- قطع ميكانيكية وإكسسوارات (مقر مصر) | 12- شحنات قطع غيار (مقر مصر)
         const galleryData = {
             ar: [
-                { t: "فحص واختبار المحركات", d: "اختبار الجودة والتأكد من كفاءة المحركات." },
-                { t: "قص وتجهيز الأنصاف", d: "تجهيز الأنصاف الأمامية والخلفية بحرفية." },
-                { t: "تستيف وتحميل الحاويات", d: "استغلال المساحات وتأمين الشحنة بالنقل البحري." },
-                { t: "شحنات وقطع غيار", d: "معاينة وتجهيز الطلبيات الخاصة بالعملاء." },
-                { t: "فحص وتجهيز المحركات", d: "تجهيز الجيربوكس والضفيرة والكمبيوتر." },
                 { t: "الساحة اليابانية", d: "من ساحات المزاد مباشرة في تشيبا - اليابان." },
-                { t: "تجهيز الصاج والهيكل", d: "تفكيك الأجزاء الخارجية حسب طلب العميل." },
-                { t: "تحميل الحاويات 40 قدم / 20 قدم", d: "عمليات الشحن البحري المنتظمة لمصر." },
+                { t: "فحص واختبار المحركات", d: "اختبار الجودة والتأكد من كفاءة المحركات." },
+                { t: "فحص وتجهيز المحركات", d: "تجهيز ناقل الحركة والضفيرة والكمبيوتر." },
                 { t: "معاينة قطع السيارات", d: "اختيار أفضل القطع الخالية من العيوب." },
+                { t: "تجهيز الصاج والهيكل", d: "تفكيك الأجزاء الخارجية حسب طلب العميل." },
+                { t: "قص وتجهيز الأنصاف", d: "تجهيز الأنصاف الأمامية والخلفية بحرفية." },
                 { t: "أنصاف أمامية Nose Cuts", d: "قص الوجهيات وتثبيتها بأمان." },
-                { t: "قطع ميكانيكية وإكسسوارات", d: "توفير جميع احتياجات قطع الغيار اليابانية." },
-                { t: "تجهيز الشحنات للتصدير", d: "متابعة عملية الشحن والتغليف حتى الوصول." }
+                { t: "تجهيز الشحنات للتصدير", d: "متابعة عملية الشحن والتغليف حتى الوصول." },
+                { t: "تستيف وتحميل الحاويات", d: "استغلال المساحات وتأمين الشحنة في النقل البحري." },
+                { t: "تحميل الحاويات 40 قدم / 20 قدم", d: "عمليات الشحن البحري المنتظمة لمصر." },
+                { t: "قطع ميكانيكية وإكسسوارات (مقر مصر)", d: "توفير جميع احتياجات قطع الغيار اليابانية." },
+                { t: "شحنات قطع غيار (مقر مصر)", d: "معاينة وتجهيز الطلبيات الخاصة بالعملاء." }
             ],
             en: [
-                { t: "Engine Testing & Inspection", d: "Ensuring quality and performance for all tested engines." },
-                { t: "Half Cut Preparation", d: "Precision front nose cuts and rear body dismantling." },
-                { t: "Container Vanning & Loading", d: "Optimizing space and securing cargo for ocean freight." },
-                { t: "Spare Parts Shipments", d: "Inspecting and preparing customized customer orders." },
-                { t: "Engine & Drivetrain Setup", d: "Complete setup including transmission, wiring & ECU." },
                 { t: "Japan Yard Operations", d: "Direct sourcing from Chiba auction yards, Japan." },
-                { t: "Body Parts & Sheet Metal", d: "Dismantling exterior panels per client request." },
-                { t: "20ft & 40ft HQ Containers", d: "Regular sea freight shipping schedules to Egypt." },
+                { t: "Engine Testing & Inspection", d: "Ensuring quality and performance for all tested engines." },
+                { t: "Engine & Drivetrain Setup", d: "Complete setup including transmission, wiring & ECU." },
                 { t: "Auto Parts Quality Check", d: "Selecting fault-free premium JDM components." },
+                { t: "Body Parts & Sheet Metal", d: "Dismantling exterior panels per client request." },
+                { t: "Half Cut Preparation", d: "Precision front nose cuts and rear body dismantling." },
                 { t: "Front Nose Cuts", d: "Professional cutting and safe packing of front ends." },
-                { t: "Mechanical Parts & Accessories", d: "Full range of Japanese spare parts solutions." },
-                { t: "Export Cargo Preparation", d: "Comprehensive packaging and tracking till delivery." }
+                { t: "Export Cargo Preparation", d: "Comprehensive packaging and tracking till delivery." },
+                { t: "Container Vanning & Loading", d: "Optimizing space and securing cargo for ocean freight." },
+                { t: "20ft & 40ft HQ Containers", d: "Regular sea freight shipping schedules to Egypt." },
+                { t: "Mechanical Parts & Accessories (Egypt Office)", d: "Full range of Japanese spare parts solutions." },
+                { t: "Spare Parts Shipments (Egypt Office)", d: "Inspecting and preparing customized customer orders." }
             ],
             ja: [
+                { t: "千葉ヤード風景", d: "千葉県オークション会場からの直接調達" },
                 { t: "エンジン動作確認・テスト", d: "品質基準をクリアした高品質エンジンの厳選" },
-                { t: "ハーフカット・解体作業", d: "フロントノーズカットおよびリアボディの精密解体" },
-                { t: "コンテナバンニング・詰込", d: "空間最適化と海上輸送用の確実な固定作業" },
-                { t: "自動車部品・パーツ出荷", d: "個別オーダーに応じた部品の検品と出荷準備" },
                 { t: "駆動系・ECUセットアップ", d: "ミッション、ハーネス、コンピューター一式" },
-                { t: "千葉ヤード風景", d: "千葉県オークション会場からの direct 調達" },
-                { t: "外装・ボディパーツ解体", d: "お客様のリクエストに応じた外装部分の取り外し" },
-                { t: "20ft/40ft コンテナ積載", d: "エジプト向け regular 海上コンテナ便" },
                 { t: "パーツ品質検査", d: "状態の良い高品質な JDM パーツの選定" },
+                { t: "外装・ボディパーツ解体", d: "お客様のリクエストに応じた外装部分の取り外し" },
+                { t: "ハーフカット・解体作業", d: "フロントノーズカットおよびリアボディの精密解体" },
                 { t: "ノーズカット（フロント）", d: "フロント面の精密カットおよび安全梱包" },
-                { t: "メカニカル部品＆ accessories", d: "日本車パーツのあらゆるニーズに対応" },
-                { t: "輸出出荷・パッキング", d: "現地到着までの万全な packaging と管理" }
+                { t: "輸出出荷・パッキング", d: "現地到着までの万全な梱包と管理" },
+                { t: "コンテナバンニング・詰込", d: "空間最適化と海上輸送用の確実な固定作業" },
+                { t: "20ft/40ft コンテナ積載", d: "エジプト向け定期海上コンテナ便" },
+                { t: "メカニカル部品＆アクセサリー（エジプト支社）", d: "日本車パーツのあらゆるニーズに対応" },
+                { t: "自動車部品・パーツ出荷（エジプト支社）", d: "個別オーダーに応じた部品の検品と出荷準備" }
             ]
         };
 
@@ -397,7 +414,7 @@
                 s2Desc: "تفكيك وقص السيارات حسب الطلب (أنصاف أمامية Nose Cuts، أنصاف خلفية، أجزاء الصاج والهيكل) بأعلى معايير الدقة.",
                 s3Title: "تستيف وشحن الحاويات (Vanning)",
                 s3Tag: "Container Loading 20ft / 40ft HQ",
-                s3Desc: "تجهيز وتحميل الحاويات وتستيف القطع باحترافية لتوفير المجمعات والمساحات وتقليل تكلفة الشحن للمستورد.",
+                s3Desc: "تجهيز وتحميل الحاويات وتستيف القطع باحترافية لتوفير المساحات وتقليل تكلفة الشحن للمستورد.",
                 galleryTitle: "معرض الأعمال والساحة اليابانية",
                 gallerySubtitle: "نماذج من شحناتنا، فحص المحركات، وتستيف الحاويات في موقع الشركة باليابان (اضغط على الصورة للتكبير)",
                 aboutTitle: "بيانات الشركة والمواقع الرسمية",
@@ -437,7 +454,7 @@
                     "استفسار عام (General Inquiry)"
                 ],
                 lblDetails: "تفاصيل الطلب (أكواد المحركات، أنصاف قطع، حاويات)",
-                phDetails: "مثال: مطلوب محرك 2ZR-FXE مع الكيربكس، وطلب أسعار شحن حاوية 40 قدم.",
+                phDetails: "مثال: مطلوب محرك 2ZR-FXE مع الجيربوكس، وطلب أسعار شحن حاوية 40 قدم.",
                 btnSubmit: "إرسال عبر الواتساب",
                 alertMsg: "جاري تحويلك إلى الواتساب لإتمام طلبك ومتابعة المبيعات...",
                 attachNotice: "💡 يمكنك إرفاق صور القطع أو قوائم الأكواد مباشرة بعد الانتقال لربط الواتساب.",
@@ -593,6 +610,34 @@
             }
         };
 
+        function updateContactFormatting(lang) {
+            const jpTel = document.getElementById('contact-jp-tel');
+            const jpFax = document.getElementById('contact-jp-fax');
+            const egTel = document.getElementById('contact-eg-tel');
+
+            if (lang === 'ar') {
+                if (jpTel) {
+                    jpTel.innerHTML = `<i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i><a href="tel:0433104035" dir="ltr" class="inline-block hover:underline font-medium">043-310-4035</a><span>TEL:</span>`;
+                }
+                if (jpFax) {
+                    jpFax.innerHTML = `<i class="fa-solid fa-fax text-gold-600" aria-hidden="true"></i><span dir="ltr" class="inline-block font-medium">043-310-4036</span><span>FAX:</span>`;
+                }
+                if (egTel) {
+                    egTel.innerHTML = `<i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i><a href="tel:+201050003380" dir="ltr" class="inline-block hover:underline font-medium">+20 1050003380</a><span>TEL:</span>`;
+                }
+            } else {
+                if (jpTel) {
+                    jpTel.innerHTML = `<i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i><span>TEL:</span><a href="tel:0433104035" dir="ltr" class="inline-block hover:underline font-medium">043-310-4035</a>`;
+                }
+                if (jpFax) {
+                    jpFax.innerHTML = `<i class="fa-solid fa-fax text-gold-600" aria-hidden="true"></i><span>FAX:</span><span dir="ltr" class="inline-block font-medium">043-310-4036</span>`;
+                }
+                if (egTel) {
+                    egTel.innerHTML = `<i class="fa-solid fa-phone text-gold-600" aria-hidden="true"></i><span>TEL:</span><a href="tel:+201050003380" dir="ltr" class="inline-block hover:underline font-medium">+20 1050003380</a>`;
+                }
+            }
+        }
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu) menu.classList.toggle('hidden');
@@ -726,6 +771,8 @@
             updateText('val-jp-since', data.valJpSince);
             updateText('lbl-eg-since', data.lblEgSince);
             updateText('val-eg-since', data.valEgSince);
+
+            updateContactFormatting(lang);
 
             updateText('form-title', data.formTitle);
             updateText('form-subtitle', data.formSubtitle);
